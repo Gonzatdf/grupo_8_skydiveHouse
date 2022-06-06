@@ -1,10 +1,10 @@
 # grupo_8_skydiveHouse
 Proyecto integrador Digital House.
 
-## url del repositorio: [Repositorio del proyecto](https://github.com/Gonzatdf/grupo_8_skydiveHouse.git "url del repositorio"):smiley:
+## url del repositorio: [Repositorio del proyecto](https://github.com/Gonzatdf/grupo_8_skydiveHouse.git "url del repositorio"):rocket:
 
 
-## Necesidad:
+## +Necesidad:
 
 La idea de la creación de **“Skydive House”** surge, una vez más, de la posibilidad de
 satisfacer una necesidad. Al acudir a uno de los centros de paracaidismo más cercanos que se encuentra a 200 km de distancia, no es difícil observar como la mayoría de paracaidistas  deben llevar a cabo un largo recorrido para llegar a los centros. Además también suele ser usual que debido a la concentración de actividad los fines de semana y en épocas donde las condiciones meteorológicas son más favorables se produce una alta demanda que en la mayoría de ocasiones (también favorecido por la propia naturaleza de este deporte) no puede ser satisfecha. Nos encontramos con muchos paracaidistas que vuelven a casa sin haber podido realizar el número de saltos que deseaban.
