@@ -1,3 +1,5 @@
+![/skydives_home.png](imagen)
+
 # grupo_8_skydiveHouse
 Proyecto integrador Digital House.
 
