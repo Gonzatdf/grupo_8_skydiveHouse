@@ -1,4 +1,4 @@
-![/skydives_home.png](imagen)
+![imagen del proyecto](/skydives_home.png "imágen del proyecto")
 
 # grupo_8_skydiveHouse
 Proyecto integrador Digital House.
