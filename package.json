@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_skydivehouse",
+  "version": "1.0.0",
+  "description": "![imagen del proyecto](/skydives_home.png \"imágen del proyecto\")",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzatdf/grupo_8_skydiveHouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzatdf/grupo_8_skydiveHouse/issues"
+  },
+  "homepage": "https://github.com/Gonzatdf/grupo_8_skydiveHouse#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

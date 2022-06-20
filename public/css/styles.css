@@ -1,0 +1,76 @@
+* {
+  font-family: 'Anek Malayalam', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+
+nav img.logo {
+  display: inline-block;
+  width: 80px;
+}
+
+nav ul {
+  float: right; /* corre la seccion a la iz, no pude hacerlo con flexbox */
+  margin-right: 20px;
+  list-style-type: none;
+
+  /* display: flex;    
+    flex-direction: row row-reverse;
+    justify-content: space-between; */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 11px 5px 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(44, 42, 42);
+  display: none;
+}
+a:hover {
+  color: #962420;
+}
+
+.checkbtn {
+  font-size: 20px;
+  color: rgb(44, 42, 42);
+  float: right;
+  line-height: 42px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#check {
+   display: none; /*segui un tutorial para el colapso del menu no estoy segura el funciona */
+}
+
+/* #check:checked  {
+    pending
+} */
+
+footer p {
+    color: rgb(44, 42, 42);
+    font-size: 0.4em;
+    margin: 2px 5px;
+}
+
+
+@media (min-width: 445px) {
+    
+  nav ul li a {
+    display: inline-block;
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 15px 5px 5px;
+  }
+  .checkbtn {
+    display: none;
+  }
+}
