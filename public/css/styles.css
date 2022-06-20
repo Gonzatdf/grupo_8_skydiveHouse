@@ -61,9 +61,22 @@ nav ul li a.active {
 }
 
 body section {
-  width: 80vw;
-  height: 90vh;
- 
+  width: 100vw;
+  height: 100vh; 
+  position: relative;
+}
+
+body section p {
+  width:230px;
+  height: 150px;   
+}
+
+p#mensajeHome {
+  padding: 70px 10px;
+  font-size: 1em;
+  color: rgb(44, 42, 42);
+  position: absolute;
+  bottom: 115px;
 }
 
 footer p {
@@ -89,7 +102,7 @@ footer p {
     transition: all .5s;
   }
 
-  nav ul li{
+  nav ul li {
     display: block;
     margin: 25px 0;
     line-height: 25px;
@@ -105,29 +118,14 @@ footer p {
   #check:checked ~ ul {
     left:0;
   }
-  #check:checked ~ body; {
-    background-image: none;
-    background-color: rgb(150, 36, 32);
-  }
+
 }
-
-
 
 @media (min-width: 480px) {
   nav {
     background-color: white;
   }
-  /* body ~ nav {
-    background-image: url("../img/skydivers-home.jpg");  
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: white;
-   } */
-   body{
-   background-image: url("../img/skydivers-home2.jpg"); 
-   }
-
-   nav .logo-PC {
+     nav .logo-PC {
     display: inline-block;
     width: 70px;         
   }
@@ -152,4 +150,17 @@ footer p {
   .checkbtn {
     display: none;
   }
+}
+@media (min-width: 580px){
+  body{
+    background-image: url("../img/skydivers-home.jpg"); 
+    }
+
+    p#mensajeHome {
+      text-align: right;
+      position: absolute;
+      right: 20px;
+      color: white;
+    }
+    
 }
