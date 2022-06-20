@@ -18,12 +18,12 @@ nav .logo-PC {
 
 nav .logo-phone {
   display: inline-block;
-  width: 80px;
+  width: 120px;
 }
 
 nav ul {
   float: right; /* corre la seccion a la iz, no pude hacerlo con flexbox */
-  margin-right: 20px;
+  margin-right: 13px;
   list-style-type: none;
   /* display: flex;    
     flex-direction: row row-reverse;
@@ -32,21 +32,22 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin: 11px 5px 5px;
-  color: white;
+  margin: 15px 5px 2px;
+  
 }
-nav ul li a {
-  text-decoration: none;
+nav ul li a #user, #cart {
+  color: white;
+  font-size: 1.2em;
+}
+
+nav ul li a.active {
   font-weight: 500;
   color: rgb(44, 42, 42);
   display: none;
 }
-a:hover {
-  color: #962420;
-}
 
 .checkbtn {
-  font-size: 20px;
+  font-size: 19px;
   color: white;
   float: right;
   line-height: 42px;
@@ -75,7 +76,6 @@ footer p {
     float: right;
 }
 
-
 @media (min-width: 480px) {
   nav {
     background-color: white;
@@ -89,23 +89,26 @@ footer p {
     
    nav .logo-PC {
     display: inline-block;
-    width: 70px;     
+    width: 70px;         
   }
   
   nav .logo-phone {
     display: none;
-    width: 80px;
   }
 
-  nav ul li a {
+  nav ul li a.active {
     display: inline-block;
+   text-decoration: none;
   }
-  nav ul li {
-    display: inline-block;
-    margin: 15px 5px 5px;
+
+  nav ul li a #user, #cart {   
     color: rgb(44, 42, 42);
   }
   
+  a.active:hover, #user:hover, #cart:hover {
+    color: rgb(150, 36, 32);  
+      }
+
   .checkbtn {
     display: none;
   }
