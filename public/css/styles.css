@@ -104,7 +104,7 @@ footer p {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(94, 93, 93, 0.5);
+    background: rgba(20, 20, 20, 0.9);
     top: 100px;
     left: -100%; /*para sacar el menu de la vista */
     text-align: center;
