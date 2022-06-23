@@ -1,0 +1,145 @@
+main.cartBack1 {
+  background-color: rgb(230, 230, 232);
+  color: rgb(150, 36, 32);
+  display: flex;
+  height: 100vh;
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+section#calender-total2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 70vw;
+}
+
+section#PPCT-calendar3 {
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-grow: 100;
+  align-content: flex-end;
+}
+
+section#paracaidasCart2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+}
+section#paracaidasCart2 img {
+  width: 100%;
+  flex-basis: 100px;
+  flex-shrink: 0;
+}
+
+section#PPCT-calendar3 div#PPCT,
+div#calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#totalCart3 {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(96, 135, 167);
+  color: white;
+  border-radius: 15px;
+  border: solid 2px;
+  max-width: 60%;
+  margin: 0 18px;
+  padding: 20px;
+}
+
+div#totalCarrito {
+  max-width: 20vw;
+  font-weight: 500;
+}
+div#totalCarrito p {
+  padding: 3%;
+  font-weight: 500;
+  font-size: medium;
+}
+
+div#totalCarrito button {
+  color: rgb(150, 36, 32);
+  border-radius: 10px;
+  max-width: 200%;
+  padding: 2px 5px;
+  margin-top: 5px;
+  font-weight: 500;
+  justify-content: center;
+}
+div#totalCarrito button:hover {
+  background-color: rgb(207, 207, 207);
+}
+div#PPCT table {
+  margin: 10px 5px 70px;
+}
+div#PPCT table th,
+td {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.35em;
+}
+
+div#PPCT table th {
+  font-weight: 600;
+}
+
+div#PPCT table td {
+  color: rgb(44, 42, 42);
+}
+
+section#totalCart3 div,
+section#PPCT-calendar3 div img {
+  width: 38.5vw;
+  margin: 5px;
+}
+
+@media (max-width: 480px) {
+  nav .logo-PC {
+    display: inline-block;
+    width: 70px;
+  }
+
+  nav .logo-phone {
+    display: none;
+  }
+  .checkbtn i {
+    color: rgb(44, 42, 42);
+  }
+}
+
+@media (max-width: 899px) {
+  /* section#totalCart3 img,
+  section#PPCT-calendar3 div img {
+     /* width: 60vw; me desborda el box  */
+
+  section#totalCart3 {
+    flex: 0 0 70vw;
+  }
+
+  section#calender-total2 {
+    height: 100vh;
+    flex: 0 0 70vw;
+  }
+}
+
+@media (min-width: 900px) {
+  section#calender-total2 {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  section#totalCart3 img,
+  section#PPCT-calendar3 div img {
+    width: 32vw;
+  }
+  main.cartBack1 {
+    margin-top: 30px;
+  }
+}
