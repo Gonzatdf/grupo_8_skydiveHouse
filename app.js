@@ -9,7 +9,11 @@ app.get ('/', (req,res) => {
     res.sendFile (path.resolve(__dirname, "views/index.html"))
 });
 
+app.get('/productDetail', (req,res)=>{
+    res.sendFile (path.resolve(__dirname, "views/productDetail.html"))
+});
 
 
 
-app.listen (5000, () => console.log ("http://localhost:5000/"))
+
+app.listen (4000, () => console.log ("http://localhost:4000/"))
