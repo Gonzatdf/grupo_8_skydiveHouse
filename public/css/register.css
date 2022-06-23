@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #2b2a29;
+  --secondary-color: #962420;
+  --font: Helvetica, sans-serif;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--font);
+  background-image: url("/img/skydive-registro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header {
+  width: 100vw;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  text-align: right;
+  color: white;
+  line-height: 80px;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: white;
+}
+.logo-phone,
+.fa-bars {
+  width: 100%;
+}
+
+.bar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  display: none;
+}
+.bar-nav__item {
+  margin-left: 40px;
+  letter-spacing: 2px;
+}
+.bar-nav__link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.form {
+  background-color: rgba(255 255 255 /0.8);
+  max-width: 350px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 15px;
+}
+.form-title {
+  margin-top: 0;
+}
+.form-field {
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-field__label {
+  background-color: gray;
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+.form-field__icon {
+  font-size: 1.4rem;
+  color: aliceblue;
+}
+.form-field__input {
+  width: 85%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  caret-color: var(--secondary-color);
+}
+.form-field__input:focus {
+  outline: none;
+}
+.form-button {
+  width: 85%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: gray;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.bar-nav__link:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+}
+.form-field__label:hover,
+.form-button:hover {
+  background-color: var(--secondary-color);
+}
+.text {
+  color: white;
+  font-size: 1.2rem;
+
+  letter-spacing: 1.2px;
+}
+::placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 80%;
+    height: 100vh;
+    margin: 50px auto;
+    position: relative;
+  }
+  .header {
+    background-color: #fff;
+    box-shadow: 0 -2px 20px gray;
+  }
+  .logo-right {
+    display: none;
+  }
+  .bar-nav {
+    display: flex;
+  }
+  .header i[class^="fa"] {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  .form {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  .text {
+    position: absolute;
+    top: 480px;
+    left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    max-width: 800px;
+  }
+}
