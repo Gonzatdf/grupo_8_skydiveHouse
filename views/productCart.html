@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\stylesCart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;400;500&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/96cdcb0a05.js" crossorigin="anonymous"></script>
+    <title>Skydive</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="/"><img class="logo-PC" src="img\logo-red-removebg2.png" alt="logo-nav-pc" /></a>
+            <a href="/"><img class="logo-phone" src="img\logowhite-removebg.png" alt="logo-nav-PC" /></a>
+            <ul>
+                <li><a class="active" href="/">NOSOTROS</a></li>
+                <li><a class="active" href="/">RESERVA TU SALTO</a></li>
+                <li><a class="active" href="/">REGISTRATE</a></li>
+                <li> <a href="/"> <i class="fa-solid fa-user-astronaut" id="user"></a></i></li>
+                <li> <a href="/productCart"><i class="fa-solid fa-cart-shopping" id="cart"></a></i></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cartBack1">
+        <section id="paracaidasCart2">
+            <div>
+                <img src="img\paracaidas-removebg.png" alt="paracaidasCart">
+            </div>
+        </section>
+        <section id="calender-total2">
+            <section id="PPCT-calendar3">
+                <div id="PPCT">
+                    <!-- <img src="img\productoPH.JPG" alt="productoPH"> -->
+                    <table>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td>Salto Tadem</td>
+                            <td>$500.000</td>
+                            <td> <select name="" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select></td>
+                            <td>$1.000.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="calendar"> <input type="date"> <img src="img\calendar-PH.JPG" alt="CalendarPlaceholder"></div>
+            </section>
+
+            <section id="totalCart3">
+                <!-- <div > <img src="img\totalPH.JPG" alt="totalPlaceholder"></div> -->
+                <div id="totalCarrito">
+                    <p> Total Carrito</p>
+                    <hr>
+                    <p>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;$1.000.000</p>
+                    <hr>
+                    <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1.000.000</p>
+                    <button> FINALIZAR COMPRA</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="cartBack">
+        <p>© 2022 Skydive House, inc. </p>
+    </footer>
+</body>
+
+</html>

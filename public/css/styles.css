@@ -5,24 +5,24 @@
   margin: 0;
   font-size: 0.95em;
 }
- body main {
-  background-image: url("../img/skydivers-phone.jpg");  
+body main#home {
+  background-image: url('../img/skydivers-phone.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: white;
   overflow: hidden;
   background-position: left center;
- }
+}
 
- nav {
+nav {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
- }
+}
 
 nav .logo-PC {
-  display: none; 
+  display: none;
 }
 
 nav .logo-phone {
@@ -42,9 +42,9 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 15px 5px 2px;
-  
 }
-nav ul li a #user, #cart {
+nav ul li a #user,
+#cart {
   color: white;
   font-size: 1.2em;
 }
@@ -66,18 +66,18 @@ nav ul li a.active {
 
 #check {
   display: none;
-    /*segui un tutorial para el colapso del menu no estoy segura el funciona */
+  /*segui un tutorial para el colapso del menu no estoy segura el funciona */
 }
 
-body section {
+body section#homeDos {
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   position: relative;
 }
 
-body section p {
-  width:230px;
-  height: 150px;   
+body section p#mensajeHome {
+  width: 230px;
+  height: 150px;
 }
 
 p#mensajeHome {
@@ -89,15 +89,15 @@ p#mensajeHome {
 }
 
 footer p {
-    color: white;
-    font-size: 0.7em;
-    margin: 2px 5px;
-    float: right;
+  color: white;
+  font-size: 0.7em;
+  margin: 2px 5px;
+  float: right;
 }
 
-@media (max-width: 479px){
+@media (max-width: 479px) {
   .checkbtn {
-    display: block;    
+    display: block;
   }
 
   ul {
@@ -108,7 +108,7 @@ footer p {
     top: 100px;
     left: -100%; /*para sacar el menu de la vista */
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   nav ul li {
@@ -117,59 +117,60 @@ footer p {
     line-height: 25px;
     font-size: medium;
   }
-  
+
   nav ul li a.active {
     display: inline-block;
-   text-decoration: none;
-   color:white;
+    text-decoration: none;
+    color: white;
   }
 
   #check:checked ~ ul {
-    left:0;
+    left: 0;
   }
-
 }
 
 @media (min-width: 480px) {
   nav {
     background-color: white;
   }
-     nav .logo-PC {
+  nav .logo-PC {
     display: inline-block;
-    width: 70px;         
+    width: 70px;
   }
-  
+
   nav .logo-phone {
     display: none;
   }
 
   nav ul li a.active {
     display: inline-block;
-   text-decoration: none;
+    text-decoration: none;
   }
 
-  nav ul li a #user, #cart {   
+  nav ul li a #user,
+  #cart {
     color: rgb(44, 42, 42);
   }
-  
-  a.active:hover, #user:hover, #cart:hover {
-    color: rgb(150, 36, 32);  
-      }
+
+  a.active:hover,
+  #user:hover,
+  #cart:hover {
+    color: rgb(150, 36, 32);
+  }
 
   .checkbtn {
     display: none;
   }
 }
-@media (min-width: 580px){
-  body main{
-    background-image: url("../img/skydivers-home.jpg"); 
-    }
+@media (min-width: 580px) {
+  body main#home {
+    background-image: url('../img/skydivers-home.jpg');
+  }
 
-    p#mensajeHome {
-      text-align: right;
-      position: absolute;
-      right: 20px;
-      color: white;
-    }
-    
+  p#mensajeHome {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    color: white;
+  }
 }
