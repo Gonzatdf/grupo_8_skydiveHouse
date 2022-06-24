@@ -19,4 +19,4 @@ Seguir apoyandonos entre todos, para llegar juntos al objetivo.
 
 
 **Dejar de hacer..**
-Dejar dew usar etiqutas muy genericas en HTML/CSS
+Dejar de usar etiqutas muy genericas en HTML/CSS
