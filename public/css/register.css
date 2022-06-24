@@ -119,11 +119,12 @@ body {
   cursor: pointer;
   transition: all 300ms;
 }
+
 .bar-nav__link:hover {
   color: var(--secondary-color);
-  font-weight: bold;
-  border-bottom: 1px solid;
-  padding-bottom: 2px;
+}
+.bar-nav__link i[class^="fa"]:hover {
+  color: var(--secondary-color);
 }
 .form-field__label:hover,
 .form-button:hover {

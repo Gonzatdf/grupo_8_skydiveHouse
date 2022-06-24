@@ -41,6 +41,9 @@ body {
   font-size: 2rem;
   color: white;
 }
+.logo-pc {
+  display: none;
+}
 .logo-phone,
 .fa-bars {
   width: 100%;
@@ -138,15 +141,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
-  cursor: pointer;
   transition: all 300ms;
 }
-.bar-nav__link:hover {
-  color: var(--secondary-color);
-  font-weight: bold;
-  border-bottom: 1px solid;
-  padding-bottom: 2px;
-}
+
 .form-field__label:hover,
 .form-button:hover {
   background-color: var(--secondary-color);
@@ -173,6 +170,13 @@ body {
     background-color: #fff;
     box-shadow: 0 -2px 20px gray;
   }
+  .logo-phone {
+    display: none;
+  }
+  .logo-pc {
+    display: flex;
+    width: 100%;
+  }
   .logo-right {
     display: none;
   }
@@ -193,6 +197,10 @@ body {
     position: absolute;
     top: 480px;
     left: 0;
+    margin-left: 3px;
+  }
+  .icono_sobre {
+    color: black;
   }
 }
 
