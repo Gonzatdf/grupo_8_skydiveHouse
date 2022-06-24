@@ -201,6 +201,11 @@ body {
   }
   .icono_sobre {
     color: black;
+    margin-right: 10px;
+  }
+  .bar-nav__link:hover,
+  .bar-nav__link i[class^="fa"]:hover {
+    color: var(--secondary-color);
   }
 }
 
