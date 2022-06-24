@@ -1,26 +1,22 @@
-Comenzar a hacer..
-
+**Comenzar a hacer..**
 reunirnos para definir ciertos criterios de base, antes de comenzar.
 
 
 
-Hacer más..
-
+**Hacer más..**
 Mas reuniones de sync, y soporte en general a quien lo necesite.
 
 
 
-Continuar haciendo..
-
+**Continuar haciendo..**
 Seguir apoyandonos entre todos, para llegar juntos al objetivo.
 
 
 
 
-Hacer menos..
+**Hacer menos..**
 
 
 
-Dejar de hacer..
-
+**Dejar de hacer..**
 Dejar dew usar etiqutas muy genericas en HTML/CSS
