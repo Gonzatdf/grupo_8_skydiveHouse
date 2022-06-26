@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="stylesheet" href="css/register.css">
   <link rel="stylesheet" href="css/login.css" />
   <script src="https://kit.fontawesome.com/96cdcb0a05.js" crossorigin="anonymous"></script>
   <title>Skydives - Registro de Usuario</title>
@@ -28,7 +28,6 @@
         </li>
         <li class="bar-nav__item">
           <a class="bar-nav__link" href="/register">REGISTRATE</a>
-        </li>
         <li class="bar-nav__item">
           <a class="bar-nav__link" href="/login">
             <i class="fa-solid fa-user-astronaut"></i></a>
@@ -43,7 +42,7 @@
     </div>
   </header>
   <main class="main">
-    <form  class="form">
+    <form class="form">
       <div class="form-profile">
         <i class="fa-solid fa-user form-field__icon profile"></i>
       </div>
@@ -53,8 +52,9 @@
         <input class="form-field__input" type="text" placeholder="Username" id="Username" />
       </div>
       <div class="form-field">
-        <label class="form-field__label" for=""><i class="fa-solid fa-lock form-field__icon"></i></label>
-        <input class="form-field__input" type="password" placeholder="Confirm Password" />
+        <label class="form-field__label" for="confirm_password"><i
+            class="fa-solid fa-lock form-field__icon"></i></label>
+        <input class="form-field__input" type="password" placeholder="Confirm Password" id="confirm_password" />
       </div>
       <p class="text-password">
         <i class="fa-regular fa-envelope form-field__icon icono_sobre"></i>Forget password?
@@ -64,4 +64,4 @@
   </main>
 </body>
 
-</html>
+</html>l
