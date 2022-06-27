@@ -5,6 +5,7 @@ Proyecto integrador Digital House.
 
 ## url del repositorio: [Repositorio del proyecto](https://github.com/Gonzatdf/grupo_8_skydiveHouse.git "url del repositorio"):rocket:
 
+## Trello : https://trello.com/b/r74lrFI4/proyecto-integrador
 
 + ##  Necesidad:
 

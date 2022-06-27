@@ -1,0 +1,231 @@
+* {
+    font-family: 'Anek Malayalam', sans-serif;
+    box-sizing: border-box;
+    font-size: 0.95em;
+  }
+  
+  
+   nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+   }
+  
+  nav .logo-PC {
+    display: none; 
+  }
+  
+  nav .logo-phone {
+    display: inline-block;
+    width: 120px;
+  }
+  
+  nav ul {
+    float: right; /* corre la seccion a la iz, no pude hacerlo con flexbox */
+    margin-right: 13px;
+    list-style-type: none;
+    /* display: flex;    
+      flex-direction: row row-reverse;
+      justify-content: space-between; */
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 15px 5px 2px;
+    
+  }
+  nav ul li a #user, #cart {
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  nav ul li a.active {
+    font-weight: 500;
+    color: rgb(44, 42, 42);
+    display: none;
+  }
+  
+  .checkbtn {
+    font-size: 19px;
+    color: white;
+    float: right;
+    line-height: 42px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  #check {
+    display: none;
+      /*segui un tutorial para el colapso del menu no estoy segura el funciona */
+  }
+  
+  
+  footer p {
+      color: white;
+      font-size: 0.7em;
+      margin: 2px 5px;
+      float: right;
+  }
+  
+  @media (max-width: 425px){
+    .checkbtn {
+      display: block;    
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgba(20, 20, 20, 0.9);
+      top: 100px;
+      left: -100%; /*para sacar el menu de la vista */
+      text-align: center;
+      transition: all .5s;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 25px 0;
+      line-height: 25px;
+      font-size: medium;
+    }
+    
+    nav ul li a.active {
+      display: inline-block;
+     text-decoration: none;
+     color:white;
+    }
+  
+    #check:checked ~ ul {
+      left:0;
+    }
+  
+  }
+  
+  @media (min-width: 426px) {
+    nav {
+      background-color: white;
+    }
+       nav .logo-PC {
+      display: inline-block;
+      width: 70px;         
+    }
+    
+    nav .logo-phone {
+      display: none;
+    }
+  
+    nav ul li a.active {
+      display: inline-block;
+     text-decoration: none;
+    }
+  
+    nav ul li a #user, #cart {   
+      color: rgb(44, 42, 42);
+    }
+    
+    a.active:hover, #user:hover, #cart:hover {
+      color: rgb(150, 36, 32);  
+        }
+  
+    .checkbtn {
+      display: none;
+    }
+
+    main {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        
+        height: 100%;
+        margin: 0 auto;
+        
+        margin-top: 5%;
+        justify-content: space-around;
+    }
+
+    .saltoTandem{
+       margin-top: 20px;
+       width: 400px;
+       height: 300px;
+      
+}
+
+    
+    }
+
+    .altimetro {
+        margin-top: 20px;
+        width: 178px;
+       height: 299px;
+       padding: 10px;
+       
+
+    }
+
+    .textoSaltoTandem {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 400px;
+       height: 400px;
+       padding: 48px;
+       
+       
+        
+
+    }
+
+    h2 {
+        margin: 0px;
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        display: flex;
+        margin-top: 0px ;
+        padding-left: 85px;
+       
+        
+        
+        
+    }
+
+    .selectorBoton{
+
+        
+
+    }
+
+    .selectorBoton h3  {
+        display: flex;
+        flex-wrap: wrap;
+        border: outset;
+        
+        
+        
+       
+        
+        
+        
+    }
+
+    .precioSalto {
+        
+        text-align: right;
+        margin: 0px;
+    
+        
+    }
+
+    p {
+        text-align: justify;
+    }
+
+  
+
+  
+     
+      
+  }
