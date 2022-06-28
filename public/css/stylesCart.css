@@ -1,10 +1,29 @@
+body.productCart {
+  font-family: 'Anek Malayalam', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+nav.nav-home {
+  background-color: white;
+}
+
+section#paracaidasCart2 {
+  display: none;
+}
+
 main.cartBack1 {
   background-color: rgb(230, 230, 232);
   color: rgb(150, 36, 32);
   display: flex;
-  height: 100vh;
+  height: 80vh;
   margin-top: 15px;
   font-size: 1em;
+  padding: 16px;
+  justify-content: center;
+
 }
 
 section#calender-total2 {
@@ -12,8 +31,8 @@ section#calender-total2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   width: 70vw;
+  margin-top: 10px;
 }
 
 section#PPCT-calendar3 {
@@ -23,16 +42,9 @@ section#PPCT-calendar3 {
   align-content: flex-end;
 }
 
-section#paracaidasCart2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30vw;
-}
-section#paracaidasCart2 img {
-  width: 100%;
-  flex-basis: 100px;
-  flex-shrink: 0;
+
+section#PPCT-calendar3 {
+  margin-top: 30px;
 }
 
 section#PPCT-calendar3 div#PPCT,
@@ -50,23 +62,27 @@ section#totalCart3 {
   color: white;
   border-radius: 15px;
   border: solid 2px;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 18px;
   padding: 20px;
 }
 
 div#totalCarrito {
-  max-width: 20vw;
+  /* max-height: 20vw; */
   font-weight: 500;
 }
+
 div#totalCarrito p {
   padding: 3%;
   font-weight: 500;
   font-size: medium;
+  padding: 0%;
 }
 
 div#totalCarrito button {
-  color: rgb(150, 36, 32);
+  color: white;
+  font-weight: 500;
+  background-color: rgb(98, 98, 98);
   border-radius: 10px;
   max-width: 200%;
   padding: 2px 5px;
@@ -74,17 +90,22 @@ div#totalCarrito button {
   font-weight: 500;
   justify-content: center;
 }
+
 div#totalCarrito button:hover {
   background-color: rgb(207, 207, 207);
 }
+
 div#PPCT table {
   margin: 10px 5px 70px;
+  border: solid 1px rgb(141, 140, 140);
+  border-radius: 15px;
 }
+
 div#PPCT table th,
 td {
   text-align: center;
-  padding: 10px 20px;
-  font-size: 1.35em;
+  padding: 10px 10px;
+  font-size: 1em;
 }
 
 div#PPCT table th {
@@ -99,6 +120,15 @@ section#totalCart3 div,
 section#PPCT-calendar3 div img {
   width: 38.5vw;
   margin: 5px;
+  margin-bottom: 20px;
+}
+
+footer.cartBack {
+  background-color: rgb(207, 207, 207);
+}
+
+footer.cartBack p {
+  color: rgb(44, 42, 42);
 }
 
 @media (max-width: 480px) {
@@ -110,6 +140,7 @@ section#PPCT-calendar3 div img {
   nav .logo-phone {
     display: none;
   }
+
   .checkbtn i {
     color: rgb(44, 42, 42);
   }
@@ -120,14 +151,20 @@ section#PPCT-calendar3 div img {
   section#PPCT-calendar3 div img {
      /* width: 60vw; me desborda el box  */
 
+  main.cartBack1 {
+    height: 100vh;
+  }
+
   section#totalCart3 {
-    flex: 0 0 70vw;
+    min-width: 30vw;
   }
 
   section#calender-total2 {
     height: 100vh;
     flex: 0 0 70vw;
   }
+
+
 }
 
 @media (min-width: 900px) {
@@ -135,11 +172,33 @@ section#PPCT-calendar3 div img {
     flex-wrap: nowrap;
     align-items: center;
   }
+
+
   section#totalCart3 img,
   section#PPCT-calendar3 div img {
     width: 32vw;
   }
+
   main.cartBack1 {
     margin-top: 30px;
   }
+
+  section#paracaidasCart2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    margin-top: 60px;
+  }
+
+  section#paracaidasCart2 img {
+    width: 100%;
+    flex-basis: 100px;
+    flex-shrink: 0;
+  }
+
+  div#totalCarrito {
+    max-width: 20vw;
+  }
+
 }

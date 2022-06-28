@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css\styles.css">
   <link rel="stylesheet" href="css\productDetail.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +15,8 @@
   <title>SkydiveHouse - Product Detail</title>
 </head>
 
-<body>
-  <nav>
+<body class="ProductDetail">
+  <nav class="nav-home">
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
       <i class="fa-solid fa-bars"></i>
@@ -28,6 +29,7 @@
       <li><a class="active" href="/register">REGISTRATE</a></li>
       <li><a href="/login"> <i class="fa-solid fa-user-astronaut" id="user"></a></i></li>
       <li><a href="/productCart"><i class="fa-solid fa-cart-shopping" id="cart"></a></i></li>
+      <img class="paracaidas-color" src="img\paracaidas-menu-removebg.png" alt="paracaidas">
     </ul>
   </nav>
   <main>
@@ -39,8 +41,7 @@
     </div>
     <div class="textoSaltoTandem">
 
-      <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur veniam quam consectetur Lorem
-        ipsum dolor sit amet consectetur veniam quam voluptate esse beatae aliquam!Lorem</p>
+      <p>El salto tándem es una técnica de altísima seguridad para la caída libre. Es una variación del paracaidismo convencional, en la que se salta junto a un instructor altamente capacitado, unidos por medio de un sistema de doble arnés. El salto se realiza a 4.000 metros de altura con un minuto de caída libre a 200 km/h.</p>
       <div class="precioSalto">
         <h2> Salto Tandem </h2>
         <h2> $500.000</h2>
@@ -57,7 +58,7 @@
         </select>
 
         <div>
-          <h3> Añadir al Carrito </h3>
+          <button> Añadir al Carrito </button>
         </div>
       </div>
 
