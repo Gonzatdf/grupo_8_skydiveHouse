@@ -62,13 +62,13 @@ section#totalCart3 {
   color: white;
   border-radius: 15px;
   border: solid 2px;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 18px;
   padding: 20px;
 }
 
 div#totalCarrito {
-  max-width: 20vw;
+  /* max-height: 20vw; */
   font-weight: 500;
 }
 
@@ -76,10 +76,13 @@ div#totalCarrito p {
   padding: 3%;
   font-weight: 500;
   font-size: medium;
+  padding: 0%;
 }
 
 div#totalCarrito button {
-  color: rgb(150, 36, 32);
+  color: white;
+  font-weight: 500;
+  background-color: rgb(98, 98, 98);
   border-radius: 10px;
   max-width: 200%;
   padding: 2px 5px;
@@ -117,6 +120,15 @@ section#totalCart3 div,
 section#PPCT-calendar3 div img {
   width: 38.5vw;
   margin: 5px;
+  margin-bottom: 20px;
+}
+
+footer.cartBack {
+  background-color: rgb(207, 207, 207);
+}
+
+footer.cartBack p {
+  color: rgb(44, 42, 42);
 }
 
 @media (max-width: 480px) {
@@ -144,7 +156,7 @@ section#PPCT-calendar3 div img {
   }
 
   section#totalCart3 {
-    flex: 0 0 70vw;
+    min-width: 30vw;
   }
 
   section#calender-total2 {
@@ -175,7 +187,8 @@ section#PPCT-calendar3 div img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30vw;
+    width: 25vw;
+    margin-top: 60px;
   }
 
   section#paracaidasCart2 img {
@@ -183,10 +196,9 @@ section#PPCT-calendar3 div img {
     flex-basis: 100px;
     flex-shrink: 0;
   }
+
+  div#totalCarrito {
+    max-width: 20vw;
+  }
+
 }
-
-
-
-
-
- 
