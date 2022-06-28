@@ -84,7 +84,7 @@ body section p#mensajeHome {
 }
 
 p#mensajeHome {
-  padding: 110px 10px;
+  padding: 120px 10px;
   color: white;
   position: absolute;
   font-weight: 200;
@@ -98,6 +98,11 @@ footer p {
   float: right;
 }
 
+img.paracaidas-color {
+  width: 35vw;
+  margin-top: 50px;
+}
+
 @media (max-width: 479px) {
   .checkbtn {
     display: block;
@@ -107,7 +112,7 @@ footer p {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(3, 3, 3, 0.9);
     top: 100px;
     left: -100%;
     /*para sacar el menu de la vista */
@@ -131,6 +136,8 @@ footer p {
   #check:checked~ul {
     left: 0;
   }
+
+
 }
 
 @media (min-width: 480px) {
@@ -166,6 +173,9 @@ footer p {
   nav.nav-home ul li a #user:hover,
   #cart:hover {
     color: rgb(150, 36, 32);
+  }
+  img.paracaidas-color {
+    display: none;
   }
 
 }
