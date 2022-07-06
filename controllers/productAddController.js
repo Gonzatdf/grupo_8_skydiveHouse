@@ -1,6 +1,6 @@
 let productAddController = {
     view: (req, res) => {
-          res.render("productAdd.ejs");
+          res.render("products/productAdd.ejs");
         }
 }
 

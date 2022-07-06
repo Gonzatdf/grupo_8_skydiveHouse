@@ -1,6 +1,6 @@
 let productDetailsController = {
     view: (req, res) => {
-        res.render("productDetail");
+        res.render("products/productDetail");
       }
 }
 

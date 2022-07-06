@@ -1,6 +1,6 @@
 let loginController = {
     view: (req, res) => {
-          res.render("login.ejs");
+          res.render("user/login.ejs");
         }
 }
 
