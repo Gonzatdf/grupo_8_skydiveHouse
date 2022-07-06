@@ -6,7 +6,7 @@
 :root {
   --primary-color: #2b2a29;
   --secondary-color: #962420;
-  --font: Helvetica, sans-serif;
+  --font: 'Anek Malayalam', sans-serif;
 }
 
 body {
@@ -66,6 +66,7 @@ body {
   margin-bottom: 10px;
 }
 
+
 .form {
   background-color: rgba(255 255 255 /0.5);
   max-width: 350px;
@@ -78,6 +79,7 @@ body {
   border-radius: 15px;
   position: relative;
   padding-bottom: 55px;
+ 
 }
 .form-profile {
   position: absolute;

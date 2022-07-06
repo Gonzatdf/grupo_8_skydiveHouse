@@ -2,41 +2,14 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <%- include("./partials/head")%> 
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/register.css">
-  <script src="https://kit.fontawesome.com/96cdcb0a05.js" crossorigin="anonymous"></script>
-  <title>Skydives - Registro de Usuario</title>
+ 
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
-      <a href="/"><img src="img/logoWhite-removebg.png" alt="logo" class="logo-phone" /></a>
-      <a href="/"><img class="logo-pc" src="img/logo-red-removebg2.png" alt="logo" /></a>
-    </div>
-
-    </div>
-
-    <nav class="nav">
-
-      <ul class="bar-nav">
-        <li class="bar-nav__item"><a class=" bar-nav__link" href="/">NOSOTROS</a></li>
-        <li class="bar-nav__item"><a class="bar-nav__link" href="/productDetail">RESERVA TU SALTO</a></li>
-        <li class="bar-nav__item"><a class="bar-nav__link" href="/register">REGISTRATE</a></li>
-        <li class="bar-nav__item"> <a class="bar-nav__link" href="/login"> <i
-              class="fa-solid fa-user-astronaut"></i></a></li>
-        <li class="bar-nav__item"> <a class="bar-nav__link" href="/productCart"><i
-              class="fa-solid fa-cart-shopping"></i></a></li>
-      </ul>
-    </nav>
-    <div class="logo logo-right">
-      <a href="#"><i class="fa-solid fa-bars"></i></a>
-    </div>
-  </header>
+  <%- include("./partials/navbar")%> 
   <main class="main">
     <form class="form">
       <h2 class="form-title">Sign up</h2>
@@ -65,7 +38,10 @@
     <div class="text">
       <p>Welcome to the ------ community!</p>
     </div>
+
+    <%- include("./partials/footer")%> 
   </main>
+  
 </body>
 
 </html>

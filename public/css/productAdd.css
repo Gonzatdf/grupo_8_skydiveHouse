@@ -6,10 +6,10 @@
 :root {
   --primary-color: #2b2a29;
   --secondary-color: #962420;
-  --font: Helvetica, sans-serif;
+  --font: 'Anek Malayalam', sans-serif;
 }
 
-body {
+body{
   color: var(--primary-color);
   font-family: var(--font);
   background-image: url("/img/skydive-login.jpg");
