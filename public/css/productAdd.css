@@ -1,0 +1,233 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #2b2a29;
+  --secondary-color: #962420;
+  --font: Helvetica, sans-serif;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--font);
+  background-image: url("/img/skydive-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header {
+  width: 100vw;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  text-align: right;
+  color: white;
+  line-height: 80px;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: white;
+}
+.logo-pc {
+  display: none;
+}
+.logo-phone,
+.fa-bars {
+  width: 100%;
+}
+
+.bar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  display: none;
+}
+.bar-nav__item {
+  margin-left: 40px;
+  letter-spacing: 2px;
+}
+.bar-nav__link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.form {
+  background-color: rgba(255 255 255 /0.5);
+  max-width: 350px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 15px;
+  position: relative;
+  padding-bottom: 55px;
+}
+.form-profile {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid lightgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.form-profile .profile {
+  font-size: 4rem;
+  color: lightgray;
+}
+.form-title {
+  margin-top: 25px;
+}
+.form-field {
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-password {
+  text-align: right;
+}
+.form-field__label {
+  background-color: gray;
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+.form-field__icon {
+  font-size: 1.4rem;
+  color: aliceblue;
+}
+.form-field__input {
+  width: 85%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  caret-color: var(--secondary-color);
+}
+.form-field__input:focus {
+  outline: none;
+}
+.form-button {
+  width: 85%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: gray;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.form-button2 {
+    width: 85%;
+    height: 20px;
+    border-radius: 15px;
+    background-color: gray;
+    border: none;
+    text-transform: upercase;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: all 300ms;
+    cursor: pointer;
+  }
+
+.form-field__label:hover,
+.form-button:hover {
+  background-color: var(--secondary-color);
+}
+.text {
+  color: white;
+  font-size: 1.2rem;
+
+  letter-spacing: 1.2px;
+}
+.icono_sobre {
+  color: black;
+  margin-right: 10px;
+}
+::placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 80%;
+    height: 100vh;
+    margin: 50px auto;
+    position: relative;
+  }
+  .header {
+    background-color: #fff;
+    box-shadow: 0 -2px 20px gray;
+  }
+  .logo-phone {
+    display: none;
+  }
+  .logo-pc {
+    display: flex;
+    width: 100%;
+  }
+  .logo-right {
+    display: none;
+  }
+  .bar-nav {
+    display: flex;
+  }
+  .header i[class^="fa"] {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  .form {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  .text {
+    position: absolute;
+    top: 480px;
+    left: 0;
+    margin-left: 3px;
+  }
+
+  .bar-nav__link:hover,
+  .bar-nav__link i[class^="fa"]:hover {
+    color: var(--secondary-color);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-size: contain;
+    background-position: center 50px;
+  }
+  .main {
+    max-width: 800px;
+  }
+}

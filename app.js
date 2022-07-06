@@ -22,4 +22,10 @@ app.get("/register", registerRoutes);
 const loginRoutes = require("./routes/loginRoutes.js");
 app.get("/login", loginRoutes);
 
+const productAddRoutes = require("./routes/productAddRoutes.js");
+app.get("/productAdd", productAddRoutes);
+
+const productEditRoutes = require("./routes/productEditRoutes.js");
+app.get("/productEdit", productEditRoutes);
+
 app.listen(PORT, () => console.log("http://localhost:" + PORT));
