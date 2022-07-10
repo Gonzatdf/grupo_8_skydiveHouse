@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router(); // funcionalidad de las rutas que ofrece express
-const indexController = require("../controllers/indexController.js");
+const mainController = require("../controllers/mainController.js");
  
-router.get ("/", indexController.index);
+router.get ("/", mainController.index);
 
 module.exports = router;

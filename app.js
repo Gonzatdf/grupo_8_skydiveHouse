@@ -1,31 +1,24 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-
 const PORT = process.env.PORT || 5000
+const mainRoutes = require("./routes/mainRoutes.js");
+const productRoutes = require("./routes/productRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
 
-app.use(express.static("public"));
 app.set ("view engine", "ejs");
 
-const mainRoutes = require("./routes/mainRoutes.js");
+app.use(express.static("public"));
+
 app.use("/", mainRoutes);
 
-const productDetailRoutes = require("./routes/productDetailRoutes.js");
-app.get("/productDetail", productDetailRoutes);
+app.get("/productDetail", productRoutes);
+app.get("/productCart", productRoutes);
+app.get("/productAdd", productRoutes);
+app.get("/productEdit", productRoutes);
 
-const productCartRoutes = require("./routes/productCartRoutes.js");
-app.get("/productCart", productCartRoutes);
+app.get("/register", userRoutes);
+app.get("/login", userRoutes);
 
-const registerRoutes = require("./routes/registerRoutes.js");
-app.get("/register", registerRoutes);
-
-const loginRoutes = require("./routes/loginRoutes.js");
-app.get("/login", loginRoutes);
-
-const productAddRoutes = require("./routes/productAddRoutes.js");
-app.get("/productAdd", productAddRoutes);
-
-const productEditRoutes = require("./routes/productEditRoutes.js");
-app.get("/productEdit", productEditRoutes);
 
 app.listen(PORT, () => console.log("http://localhost:" + PORT));
