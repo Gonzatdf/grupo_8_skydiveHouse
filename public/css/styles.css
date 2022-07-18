@@ -29,10 +29,20 @@ nav .logo-PC {
   display: none;
 }
 
+.fa-bars {
+  font-size: 22px;
+  color: white;
+}
+
 nav .logo-phone {
   display: inline-block;
-  width: 120px;
+  width: 100px;
 }
+
+/* .fa-bars {
+  font-size: 19px;
+  color: white;
+} */
 
 nav.nav-home ul {
   float: right;
@@ -60,10 +70,10 @@ nav.nav-home ul li a.active {
 }
 
 .checkbtn {
-  font-size: 19px;
+  font-size: 22px;
   color: white;
   float: right;
-  line-height: 42px;
+  line-height: 55px;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -90,18 +100,24 @@ p#mensajeHome {
   font-weight: 200;
 
 }
-
+div footer {
+  position: relative;
+}
 footer p {
-  color: white;
+  color: rgb(26, 25, 25);
   font-size: 0.7em;
   margin: 2px 5px;
-  float: right;
+ 
+  bottom: 5px;
+
 }
 
 img.paracaidas-color {
   width: 35vw;
   margin-top: 50px;
 }
+
+
 
 @media (max-width: 479px) {
   .checkbtn {
@@ -173,6 +189,8 @@ img.paracaidas-color {
   nav.nav-home ul li a #user:hover,
   #cart:hover {
     color: rgb(150, 36, 32);
+    font-weight: 600;
+    
   }
   img.paracaidas-color {
     display: none;

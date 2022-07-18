@@ -15,11 +15,11 @@
       <h2 class="form-title">Sign up</h2>
       <div class="form-field">
         <label class="form-field__label" for="Username"><i class="fa-solid fa-user form-field__icon"></i></label>
-        <input class="form-field__input" type="text" placeholder="Username" id="Username">
+        <input class="form-field__input" type="text" placeholder="Full Name" id="Username">
       </div>
       <div class="form-field">
         <label class="form-field__label" for="email"><i class="fa-regular fa-envelope form-field__icon"></i></label>
-        <input class="form-field__input" type="email" placeholder="E - mail" id="email">
+        <input class="form-field__input" type="email" placeholder="E-mail" id="email">
       </div>
       <div class="form-field">
         <label class="form-field__label" for="password"><i class="fa-solid fa-lock form-field__icon"></i></label>
@@ -30,7 +30,13 @@
             class="fa-solid fa-lock form-field__icon"></i></label>
         <input class="form-field__input" type="password" placeholder="Confirm Password" id="confirm_password">
       </div>
-      <input type="button" class="form-button" value="Create Account">
+      <div class="form-field">
+        <br>
+        <label for="image">Subir imagen</label>
+        <br>
+        <input type="file" name="image" id="image" single>
+    </div>
+      <input type="submit" class="form-button" value="Create Account">
       <!-- <button class="form-button">Create Account</button> -->
 
 

@@ -12,9 +12,8 @@
 body {
   color: var(--primary-color);
   font-family: var(--font);
-  background-image: url("/img/skydive-login.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/img/WP1.jpg");
+  
   background-position: center center;
   min-height: 100vh;
   margin: 0;

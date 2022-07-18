@@ -16,7 +16,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+ height: 100vh;
+ width: 100vw;
   margin: 0;
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 .fa-bars {
-  font-size: 2rem;
+  font-size: 22px;
   color: white;
 }
 .logo-pc {
@@ -168,7 +169,7 @@ body {
 @media (min-width: 768px) {
   .main {
     width: 80%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 50px auto;
     position: relative;
   }
@@ -218,6 +219,6 @@ body {
     background-position: center 50px;
   }
   .main {
-    max-width: 800px;
+    /* max-width: 800px; */
   }
 }

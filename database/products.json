@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "product_name": "Salto Tandem",
+    "description": "lalala",
+    "price": 500,
+    "image": "tandemItem.JPG"
+  }, {
+    "id": 2,
+    "product_name": "Salto con Wingsuit",
+    "description": "lalala",
+    "price": 800,
+    "image": "wingsuitItem.JPG"
+  }, {
+    "id": 3,
+    "product_name": "Curso para principiantes",
+    "description": "lalala",
+    "price": 1800,
+    "image": "cursoBegtem.JPG"
+  }, {
+    "id": 4,
+    "product_name": "Curso para Avanzados",
+    "description": "lalala",
+    "price": 2500,
+    "image": "cursoProItem.JPG"
+  }]

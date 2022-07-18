@@ -2,46 +2,35 @@
 <html lang="en">
 
 <head>
-  
-  <link rel="stylesheet" href="css/productDetail.css">
-  <%- include("../partials/head")%> 
+  <%- include("../partials/head")%>
+    <link rel="stylesheet" href="css/productDetail2.css">
+
 </head>
 
-<body class="ProductDetail">
-  <%- include("../partials/header")%> 
-  <main>
-    <div>
-      <a href="/"><img class="saltoTandem" src="img/skydive-tandem.jpg" alt="imagen-salto-tandem" /></a>
-    </div>
-    <div>
-      <a href="/"><img class="altimetro" src="img/altimetro-iconos.png" alt="imagen-altimetro" /></a>
-    </div>
-    <div class="textoSaltoTandem">
+<body>
+  <%- include("../partials/header")%>
+    <main>
 
-      <p>El salto tándem es una técnica de altísima seguridad para la caída libre. Es una variación del paracaidismo convencional, en la que se salta junto a un instructor altamente capacitado, unidos por medio de un sistema de doble arnés. El salto se realiza a 4.000 metros de altura con un minuto de caída libre a 200 km/h.</p>
-      <div class="precioSalto">
-        <h2> Salto Tandem </h2>
-        <h2> $500.000</h2>
+      <h1>Elegi tu proxima aventura</h1>
+      <div class="allProducts">
+
+        <% for (let index=0; index <products.length;index++) {%>
+          <article>
+            <img src="/img/<%= products[index].image %>" alt="<% products.image %>">
+            <div class="productDetail">
+              <h4>
+                <%=products[index].product_name %>
+              </h4>
+              <%= products[index].description%>
+                <%= products[index].price%>
+              </div>
+            </article>
+                  <% } %>
+            
       </div>
-      <div class="selectorBoton">
-        <select name="selector">
+    </main>
 
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-
-        </select>
-
-        <div>
-          <button> Añadir al Carrito </button>
-        </div>
-      </div>
-
-  </main>
-
-  <%- include("../partials/footer")%> 
+    <%- include("../partials/footer")%>
 </body>
 
 </html>

@@ -6,8 +6,17 @@ body.productCart {
   font-size: 0.95em;
 }
 
-nav.nav-home {
+/* nav.nav-home {
   background-color: white;
+} */
+
+nav.nav-home {
+  background-color: rgb(150, 36, 32);
+}
+
+.checkbtn i.fa-bars {
+  color: white;
+  border-top: 50px;
 }
 
 section#paracaidasCart2 {
@@ -15,7 +24,7 @@ section#paracaidasCart2 {
 }
 
 main.cartBack1 {
-  background-color: rgb(230, 230, 232);
+  /* background-color: rgb(230, 230, 232); */
   color: rgb(150, 36, 32);
   display: flex;
   height: 80vh;
@@ -131,20 +140,29 @@ footer.cartBack p {
   color: rgb(44, 42, 42);
 }
 
+
 @media (max-width: 480px) {
-  nav .logo-PC {
+  /* nav .logo-PC {
     display: inline-block;
     width: 70px;
   }
 
   nav .logo-phone {
     display: none;
-  }
+  } */
 
   .checkbtn i {
     color: rgb(44, 42, 42);
   }
 }
+
+@media (min-width: 480px) {
+  nav.nav-home {
+    background-color: rgb(240, 238, 238);
+  }
+}
+
+
 
 @media (max-width: 899px) {
   /* section#totalCart3 img,

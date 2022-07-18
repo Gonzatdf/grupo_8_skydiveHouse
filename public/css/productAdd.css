@@ -12,12 +12,11 @@
 body{
   color: var(--primary-color);
   font-family: var(--font);
-  background-image: url("/img/skydive-login.jpg");
+  background-image: url("/img/WP2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   min-height: 100vh;
   margin: 0;
+  background-clip:content-box
 }
 
 .header {
