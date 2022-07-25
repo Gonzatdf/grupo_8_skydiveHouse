@@ -22,7 +22,8 @@ app.get("/productCart", productRoutes);
 app.get("/productAdd", productRoutes);
 app.get("/productEdit", productRoutes);
 
-app.use ("/product", productRoutes); // intento de MVC
+
+app.use ("/productDetail", productRoutes); // intento de MVC
 
 app.get("/register", userRoutes);
 app.get("/login", userRoutes);

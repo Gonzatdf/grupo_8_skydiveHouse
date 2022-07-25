@@ -4,13 +4,15 @@ const productController = require("../controllers/productController.js");
 
 router.get ("/productCart", productController.cart);
 
-// Listado de productos (in progress) 
+// Listado de productos (done) 
 router.get ("/productDetail", productController.details);
 
-// Formulario de creación de productos (in progress)
+// Formulario de creación de productos (done)
 router.get ("/productAdd", productController.add);
 
-// Acción de creación, a donde se envía el formulario - POST (TBA)
+// Acción de creación, a donde se envía el formulario - POST (error)
+router.post ("/productDetail", productController.create);
+
 
 // Detalle de un producto particular por ID (TBA)
 //router.get('/:id', productController.getProductById);

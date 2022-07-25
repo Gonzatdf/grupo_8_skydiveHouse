@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
+  
   <%- include("../partials/head")%>
-    <link rel="stylesheet" href="css/productDetail2.css">
+  <link rel="stylesheet" href="css/stylesCart.css">
+  <link rel="stylesheet" href="css/productDetail2.css">
+    
 
 </head>
 
 <body>
   <%- include("../partials/header")%>
     <main>
-
-      <h1>Elegi tu proxima aventura</h1>
+      <h4 class="elegir">ELEGI TU PROXIMA AVENTURA..</h4>
       <div class="allProducts">
-
         <% for (let index=0; index <products.length;index++) {%>
           <article>
             <img src="/img/<%= products[index].image %>" alt="<% products.image %>">
@@ -21,10 +22,12 @@
               <h4>
                 <%=products[index].product_name %>
               </h4>
-              <%= products[index].description%>
-                <%= products[index].price%>
-              </div>
-            </article>
+              <div class="price">
+              <i class="fa-solid fa-dollar-sign"></i> <%= products[index].price%>
+            </div>
+              <%= products[index].description%>            
+            </div>
+          </article>
                   <% } %>
             
       </div>

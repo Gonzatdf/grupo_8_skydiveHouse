@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    
-   
+<head>  
     <%- include("../partials/head")%> 
     <link rel="stylesheet" href="css/stylesCart.css">
 </head>
@@ -29,8 +27,13 @@
                             <th>Total</th>
                         </tr>
                         <tr>
-                            <td>Salto Tadem</td>
-                            <td>$500.000</td>
+                            <td><select name="Elegi" id="">
+                                <option value="1">Salto Tandem</option>
+                                <option value="2">Curso Principiante</option>
+                                <option value="3">Curso Windsuit</option>
+                                <option value="4">Curso Avanzado</option>
+                            </select></td></td>
+                            <td> <i class="fa-solid fa-dollar-sign"></i> --</td>
                             <td> <select name="" id="">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -38,7 +41,7 @@
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                 </select></td>
-                            <td>$1.000.00</td>
+                                <td> <i class="fa-solid fa-dollar-sign"></i> --</td>
                         </tr>
                     </table>
                 </div>
@@ -47,11 +50,11 @@
 
             <section id="totalCart3">                
                 <div id="totalCarrito">
-                    <p> Total Carrito</p>
+                    <p> <h4> TOTAL CARRITO </h4></p>
                     <hr>
-                    <p>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;$1.000.000</p>
+                    <p>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-dollar-sign"></i> ---</p>
                     <hr>
-                    <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1.000.000</p>
+                    <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-dollar-sign"></i> --- </p>
                     <button> FINALIZAR COMPRA</button>
                 </div>
             </section>

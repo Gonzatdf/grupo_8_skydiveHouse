@@ -223,7 +223,7 @@ body{
 
 @media (min-width: 1200px) {
   body {
-    background-size: contain;
+    /* background-size: contain; */
     background-position: center 50px;
   }
   .main {

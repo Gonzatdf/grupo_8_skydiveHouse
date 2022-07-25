@@ -80,6 +80,7 @@ body {
   border-radius: 15px;
   position: relative;
   padding-bottom: 55px;
+  top: 50px;
  
 }
 .form-profile {
@@ -196,9 +197,8 @@ body {
   }
   .form {
     width: 400px;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
-    top: 50px;
   }
   .text {
     position: absolute;
@@ -215,7 +215,7 @@ body {
 
 @media (min-width: 1200px) {
   body {
-    background-size: contain;
+    /* background-size: contain; */
     background-position: center 50px;
   }
   .main {
