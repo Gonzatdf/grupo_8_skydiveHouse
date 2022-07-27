@@ -21,8 +21,12 @@ let productController = {
   getProductById: (req, res) => {
       let id = req.params.id;
       let product = productsList.find (product => product.id == id)
+      if (typeof product !== "undefined") {
     res.render("products/productById", {
-      product});
+      product})}
+      else{        
+          res.status (404).render("notFound.ejs")
+        }   
   },
 
   createView: (req, res) => {
@@ -38,19 +42,24 @@ let productController = {
     res.redirect ("/products")
   },
 
-  edit: (req, res) => {
+  editView: (req, res) => {
     let id = req.params.id;
     let product = productsList.find(product => product.id == id);
-    res.render('products/productEdit.ejs', {product});
+    if (typeof product !== "undefined") {
+    res.render('products/productEdit.ejs', {product})}
+    else{        
+      res.status (404).render("notFound.ejs")
+    }   
   },  
 
   updateProduct: (req, res) => {
     let id = req.params.id;
     let editProduct = req.body;
     editProduct.id = id;
+    console.log (req.body)
+    console.log (editProduct)
     for (let index = 0; index < productsList.length; index++) {
-      const element = productsList[index];
-        if (element == id) {
+        if (productsList[index] == id) {
           productsList[index] = editProduct;
         }
     }    

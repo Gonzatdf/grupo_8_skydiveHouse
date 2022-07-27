@@ -14,7 +14,7 @@ router.get ("/create", productController.createView);
 router.post ("/create", productController.create);
 
 // Formulario de edición de productos (in progress) 
-router.get ("/edit/:id", productController.edit);
+router.get ("/edit/:id", productController.editView);
 
 //Acción de edición, a donde se envía el formulario (TBA)
 router.put("/edit/:id", productController.updateProduct);

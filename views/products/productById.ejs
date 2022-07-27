@@ -14,7 +14,10 @@
       <div class="allProducts">
         
           <article>
+            <% if (product.img !== "undefined"){ %>         
+          
             <img src="/img/<%=product.image %>" alt="<% product.image %>">
+            <%}%>
             <div class="productDetail">
               <h4>
                 <%=product.product_name %>
