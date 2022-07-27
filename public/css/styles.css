@@ -81,25 +81,56 @@ nav.nav-home ul li a.active {
 #check {
   display: none;
 }
-
+/* mensaje del home */
 body section#homeDos {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-
-body section p#mensajeHome {
-  width: 230px;
-  height: 150px;
+ h3  {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  justify-content: normal;
+  padding-right: 5%;
+  color: #fff;
+  font-size: 30px;
+  transform:
+  translate (-50%, -50%);
+  animation: 
+  morph-effect 10s
+  infinite ease-in-out;
 }
 
-p#mensajeHome {
-  padding: 120px 10px;
-  color: white;
-  position: absolute;
-  font-weight: 200;
-
+h3:nth-child(1) {
+  animation-delay: -15s;
 }
+h3:nth-child(2) {
+  animation-delay: -14s;  
+}
+h3:nth-child(3) {
+  animation-delay: -13s;
+}  
+h3:nth-child(4) {
+  animation-delay: -12s;
+}
+h3:nth-child(5) {
+  animation-delay: -11s;
+}
+@keyframes morph-effect {
+  0%, 30%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  40%, 90% {
+    filter: blur(16px);
+    opacity: 0;
+  }
+}
+
+
+
+
 div footer {
   position: relative;
 }
