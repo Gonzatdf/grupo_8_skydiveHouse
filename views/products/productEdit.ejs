@@ -3,8 +3,8 @@
 
 <head>
   <%- include("../partials/head")%> 
-   <link rel="stylesheet" href="css/register.css">
-  <link rel="stylesheet" href="css/productEdit.css" />
+   <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/productEdit.css" />
 
 </head>
 
@@ -12,26 +12,31 @@
   <%- include("../partials/header")%> 
 
       <main class="main">
-    <form class="form">
+    <form class="form" action="/products/edit/<%= product.id%>?_method=PUT" 
+      method="post">
       
       <h2 class="form-title">Modificar producto</h2>
       <div class="form-field">
        
-        <input class="form-field__input" type="text" placeholder="Nombre del producto" id="Nombre del producto" />
+        <input class="form-field__input" type="text" placeholder="Nombre del producto" 
+        id="Nombre del producto" value= "<%=product.product_name?? ''%>" />
       </div>
     
       <div class="form-field">
         
-        <input class="form-field__input" type="text" placeholder="Editar descripcion" id="Editar descripcion" />
+        <input class="form-field__input" type="text" placeholder="Editar descripcion" 
+        id="Editar descripcion" value= "<%=product.description?? ''%>" />
       </div>
       <div class="form-field">
        
-        <input class="form-field__input" type="text" placeholder="Editar precio" id="Editar precio" />
+        <input class="form-field__input" type="text" placeholder="Editar precio" 
+        id="Editar precio" value= "<%=product.price?? ''%>" />
       </div>
 
       <div class="form-field">
         <label for="image">Subir imagen</label>
-        <input class="form-field__input" type="file" value="Agregar imagen" id="image" single>       
+        <input class="form-field__input" type="file" value="Agregar imagen" 
+        id="image" single value= "<%=product.image?? ''%>" /> 
     </div>
      
     <div class="form-field">

@@ -1,25 +1,37 @@
-[{
+[
+  {
     "id": 1,
     "product_name": "Salto Tandem",
     "description": "Salto con instructor desde más de 3.300 metros.",
     "price": 400,
     "image": "tandemItem.JPG"
-  }, {
+  },
+  {
     "id": 2,
     "product_name": "Curso para principiantes",
     "description": "Este innovador curso acelerado de cada libre es la manera más rápida, eficiente y segura de aprender paracaidismo. Con unos pocos días, eres capaz de saltar de un avión solo.",
     "price": 1800,
     "image": "cursoBegtem.JPG"
-  }, {
+  },
+  {
     "id": 3,
     "product_name": "Curso con Wingsuit",
     "description": "Los paracaidistas con experiencia, tienen la opcion de realizar este excitante curso con traje con alas",
     "price": 2100,
     "image": "wingsuitItem.JPG"
-  }, {
+  },
+  {
     "id": 4,
     "product_name": "Curso para Avanzados",
     "description": "Ofrecemos esta opcion para quienes les interesa capacitarte para ser intructor de este apasionado deporte",
     "price": 2500,
     "image": "cursoProItem.JPG"
-  }]
+  },
+  {
+    "id": 5,
+    "product_name": "para DELETEAR",
+    "description": "lorem",
+    "price": 1000,
+    "image": "cursoProItem.JPG"
+  }
+]

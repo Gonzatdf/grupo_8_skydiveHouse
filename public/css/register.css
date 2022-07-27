@@ -16,15 +16,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
   min-height: 110vh;
   margin: 0;
   overflow: hidden;
 }
 
-/* LH - agregue .main */
-.main {  
-  padding-top: 70px;
+.form {
+  top: 30px;
 }
 
 @media (min-width: 1200px) {
