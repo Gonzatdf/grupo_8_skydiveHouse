@@ -56,10 +56,8 @@ let productController = {
     let id = req.params.id;
     let editProduct = req.body;
     editProduct.id = id;
-    console.log (req.body)
-    console.log (editProduct)
     for (let index = 0; index < productsList.length; index++) {
-        if (productsList[index] == id) {
+        if (productsList[index].id == id) {
           productsList[index] = editProduct;
         }
     }    

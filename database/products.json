@@ -28,10 +28,17 @@
     "image": "cursoProItem.JPG"
   },
   {
-    "id": 5,
-    "product_name": "para DELETEAR",
-    "description": "lorem",
-    "price": 1000,
-    "image": "cursoProItem.JPG"
+    "product_name": "Producto Editado",
+    "description": "test de Edit",
+    "price": "999",
+    "image": "skydive-login1.jpg",
+    "id": "5"
+  },
+  {
+    "product_name": "ELIMINAME",
+    "description": "producto para eliminar",
+    "price": "17.83",
+    "image": "skydive-tandem.jpg",
+    "id": "389c9d12-a633-4ee0-913a-9efa839db2e4"
   }
 ]
