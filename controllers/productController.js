@@ -59,10 +59,10 @@ let productController = {
     console.log(req.body);
     console.log(editProduct);
     for (let index = 0; index < productsList.length; index++) {
-      if (productsList[index] == id) {
-        productsList[index] = editProduct;
-      }
-    }
+        if (productsList[index].id == id) {
+          productsList[index] = editProduct;
+        }
+    }    
     fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
 
     res.redirect("/products");

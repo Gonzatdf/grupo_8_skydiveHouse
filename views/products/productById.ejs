@@ -26,8 +26,12 @@
                 <a href="../products/cart"> <i class="fa-solid fa-cart-shopping" id="cart"></a></i>
               <i class="fa-solid fa-dollar-sign"></i> <%= product.price%>
             </div>
-              <%= product.description%>    
-              
+              <%= product.description%> 
+              <form  class="delete" action="/products/edit/<%=product.id%>">
+              <button type="submit"> Editar
+
+              </button>
+              </form> 
               
             </div>
             <!-- ELIMINAR -->
