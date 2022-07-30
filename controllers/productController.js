@@ -55,7 +55,9 @@ let productController = {
   updateProduct: (req, res) => {
     let id = req.params.id;
     let editProduct = req.body;
+    let image = req.file.filename;
     editProduct.id = id;
+    editProduct.image = image;
     console.log(req.body);
     console.log(editProduct);
     for (let index = 0; index < productsList.length; index++) {
