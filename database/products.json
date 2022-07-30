@@ -5,5 +5,19 @@
     "price": "$500.000",
     "id": "6ac49096-1a3b-40ab-8091-e3447a2d5afd",
     "image": "1659139359443.jpg"
+  },
+  {
+    "product_name": "Curso salto test",
+    "description": "test",
+    "price": "100",
+    "id": "e5bf1173-dfe4-4d34-b510-77e6eb31d7b8",
+    "image": "1659142596409.jpg"
+  },
+  {
+    "product_name": "Salto sorpresa",
+    "description": "Salto realizado sin paracaidas",
+    "price": "10",
+    "id": "e49685f5-0aa8-4047-81f5-176acd6bcd95",
+    "image": "1659142836422.jpg"
   }
 ]
