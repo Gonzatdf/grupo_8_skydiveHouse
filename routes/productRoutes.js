@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router(); // funcionalidad de las rutas que ofrece express
 const productController = require("../controllers/productController.js");
 
+const upload = require("../middlewares/multer");
+
 router.get ("/cart", productController.cart);
 
 // Listado de productos (done) 
@@ -11,7 +13,7 @@ router.get ("/", productController.details);
 router.get ("/create", productController.createView);
 
 // Acción de creación, a donde se envía el formulario - POST (error)
-router.post ("/create", productController.create);
+router.post ("/create", upload.single("image"), productController.create);
 
 // Formulario de edición de productos (in progress) 
 router.get ("/edit/:id", productController.editView);

@@ -14,7 +14,7 @@
       <div class="allProducts">
         <% for (let index=0; index <products.length;index++) {%>
           <article>
-            <a href="/products/<%= products[index].id %>"><img src="/img/<%= products[index].image %>" alt="<% products.image %>"></a>
+            <a href="/products/<%= products[index].id %>"><img src="/img/uploads/<%= products[index].image %>" alt="<% products.image %>"></a>
             <div class="productDetail">
               <h4>
                 <%=products[index].product_name %>
