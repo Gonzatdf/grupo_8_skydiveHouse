@@ -18,8 +18,11 @@ body {
   background-position: center center;
   /* min-height: 110vh; */
   margin: 0;
+<<<<<<< HEAD
   position: relative;
   /* overflow: hidden; */
+=======
+>>>>>>> 26fb1e9b4afd350d926b4e8c252171c9214d0eaa
 }
 
 .form {
