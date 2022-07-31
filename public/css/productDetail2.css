@@ -21,8 +21,15 @@ main .allProducts {
     margin-top: 20px;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: center;
 }
+    
+main .allProducts a{
+    text-decoration: none;
+    color: black;
+}
+
 
 div.allProducts article{
     width: 80vw;
@@ -32,6 +39,17 @@ div.allProducts article{
     padding-bottom: 10px;
     margin: 10px;
 }
+
+div.productDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.productDetail h4 i.fa-dollar-sign{
+    margin-left: 20px;
+}
+
 
 div.allProducts article i.fa-dollar-sign {
 right: 5px;
@@ -55,6 +73,18 @@ button.delete {
         margin-top: 5px;
         font-weight: 500;
         justify-content: center;
+}
+
+form.edit button  {
+    color: white;
+    font-weight: 500;
+    background-color: rgb(2, 128, 54);
+    border-radius: 10px;
+    max-width: 200%;
+    padding: 2px 5px;
+    margin-top: 5px;
+    font-weight: 500;
+    justify-content: center;
 }
 
 @media (min-width: 769px) {

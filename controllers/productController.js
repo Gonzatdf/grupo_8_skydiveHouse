@@ -54,9 +54,18 @@ let productController = {
 
   updateProduct: (req, res) => {
     let id = req.params.id;
+    //buscar producto con id en el json
+    let productToEdit = productsList.find((product) => {
+      return product.id == id;
+    });
     let editProduct = req.body;
-    editProduct.id = id;
-    console.log(req.body);
+    editProduct.id = id
+
+    if (req.file == undefined){
+      editProduct.image = productToEdit.image
+    }else {
+      editProduct.image = req.file.filename
+    }
     console.log(editProduct);
     for (let index = 0; index < productsList.length; index++) {
         if (productsList[index].id == id) {

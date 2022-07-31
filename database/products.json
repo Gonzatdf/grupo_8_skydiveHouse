@@ -1,23 +1,37 @@
 [
   {
-    "product_name": "Salto tandem",
-    "description": "Salto a mas de 3.000 mts, acompañado de un paracaidista profesional.",
-    "price": "$500.000",
-    "id": "6ac49096-1a3b-40ab-8091-e3447a2d5afd",
-    "image": "1659139359443.jpg"
+    "id": 1,
+    "product_name": "Salto Tandem",
+    "description": "Salto con instructor desde más de 3.300 metros.",
+    "price": 400,
+    "image": "tandemItem.JPG"
   },
   {
-    "product_name": "Curso salto test",
-    "description": "test",
-    "price": "100",
-    "id": "e5bf1173-dfe4-4d34-b510-77e6eb31d7b8",
-    "image": "1659142596409.jpg"
+    "product_name": "Curso para principiantes",
+    "description": "Este innovador curso acelerado de cada libre es la manera más rápida, eficiente y segura de aprender paracaidismo. Con unos pocos días, eres capaz de saltar de un avión solo.",
+    "price": "1800",
+    "id": "2",
+    "image": "1659233896442.JPG"
   },
   {
-    "product_name": "Salto sorpresa",
-    "description": "Salto realizado sin paracaidas",
-    "price": "10",
-    "id": "e49685f5-0aa8-4047-81f5-176acd6bcd95",
-    "image": "1659142836422.jpg"
+    "id": 3,
+    "product_name": "Curso con Wingsuit",
+    "description": "Los paracaidistas con experiencia, tienen la opcion de realizar este excitante curso con traje con alas",
+    "price": 2100,
+    "image": "wingsuitItem.JPG"
+  },
+  {
+    "id": 4,
+    "product_name": "Curso para Avanzados",
+    "description": "Ofrecemos esta opcion para quienes les interesa capacitarte para ser intructor de este apasionado deporte",
+    "price": 2500,
+    "image": "cursoProItem.JPG"
+  },
+  {
+    "product_name": "Kite Surf E",
+    "description": "- NO DISPONIBLE- eliminar",
+    "price": "99",
+    "id": "219f0ea0-0f53-43c1-bc6b-d6cd5ae74bb2",
+    "image": "1659233555208.JPG"
   }
 ]

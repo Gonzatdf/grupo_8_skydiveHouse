@@ -13,6 +13,7 @@ body main#home {
   background-color: white;
   overflow: hidden;
   background-position: left center;
+ 
   }
 
 nav.nav-home {
@@ -86,15 +87,21 @@ body section#homeDos {
   width: 100vw;
   height: 100vh;
   position: relative;
+ 
 }
+body section#homeDos div{
+  top:80px ;
+  position: relative;
+}
+
  h3  {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column-reverse;
   justify-content: normal;
-  padding-right: 5%;
+  margin-left: 3%;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   transform:
   translate (-50%, -50%);
   animation: 
@@ -128,13 +135,12 @@ h3:nth-child(5) {
   }
 }
 
-/* div footer {
-  position: relative;
-} */
-
 .pie-pagina{
   width: 100%;
   background-color: black;
+    /* position: absolute; */
+    bottom: 0;
+    display: block;
 }
 
 .pie-pagina .grupo1{
@@ -143,34 +149,44 @@ h3:nth-child(5) {
   margin: auto;
   /* display: grid; */
   display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: nowrap;
+  /* grid-template-columns: repeat(3, 1fr); */
   /* grid-gap: 50px; */
-  padding: 10px 0px;
+  padding: 2px 0px;
+  align-items: center;
+  z-index: 999;
 }
 
 .pie-pagina .grupo1 .box{
+  display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
+  
+}
+
+div.red-social{
+  display: flex;
+  justify-content: center;
 }
 
 .pie-pagina .grupo1 .box img{
   width: 100px;
+
 }
 
 .pie-pagina .grupo1 .box h2{
   color: white;
-  margin-bottom: 25px;
-  font-size: 15px;
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 .pie-pagina .grupo1 .box p{
   color: #efefef;
   margin-bottom: 10px;
-  text-align: justify;
-  font-size: 12px;
+  text-align: center;
+  font-size: 11px;
 }
 
 .pie-pagina .grupo1 .red-social a{
@@ -181,9 +197,10 @@ h3:nth-child(5) {
   line-height: 45px;
   color: #fff;
   margin-right: 10px;
-  background-color: #0d2033;
+  /* background-color: #0d2033; */
   text-align: center;
   transition: all 300ms ease;
+  border-radius: 50%;
 
 }
 
@@ -192,14 +209,30 @@ h3:nth-child(5) {
 }
 
 div#nosotros.box {
+  
   padding: 10px;
   width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  display: none;
 }
 
+div#social.box {
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+div#social.box div {
+  width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
 .pie-pagina .grupo2{
-  background-color: #0a1a2a;
-  padding: 15px 10 px;
+  background-color:rgba(3, 3, 3, 0.5); 
   text-align: center;
   color: #fff;
 
@@ -214,7 +247,7 @@ div#nosotros.box {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 18px;
-    padding: 10px 0px;
+    padding: 2px 0px;
   }
 }  
 
@@ -302,18 +335,32 @@ img.paracaidas-color {
   img.paracaidas-color {
     display: none;
   }
-
+ 
 }
 
 @media (min-width: 580px) {
   body main#home {
     background-image: url('../img/skydivers-home.jpg');
-  }
-.pie-pagina .grupo1{
-  flex-wrap: nowrap;
+
 }
 
+h3  {
+  align-items: flex-end;
+  margin-right: 3%;  
+  font-size: 30px;
+}
 
+div#logo.box {
+  display: flex;
+  height: 100%;
+   align-items: center;
+   flex-grow: 0;
+}
 
+div#nosotros.box {
+  display: flex;
+  flex-grow: 3;
+  flex-basis: 200%;
+}
 
 }

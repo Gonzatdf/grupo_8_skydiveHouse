@@ -14,9 +14,9 @@
       <div class="allProducts">
         
           <article>
-            <% if (product.img !== "undefined"){ %>         
+            <% if (product.image !== "undefined"){ %>         
           
-            <img src="/img/<%=product.image %>" alt="<% product.image %>">
+            <img src="/img/uploads/<%=product.image %>" alt="<% product.image %>">
             <%}%>
             <div class="productDetail">
               <h4>
@@ -27,7 +27,7 @@
               <i class="fa-solid fa-dollar-sign"></i> <%= product.price%>
             </div>
               <%= product.description%> 
-              <form  class="delete" action="/products/edit/<%=product.id%>">
+              <form class="edit" action="/products/edit/<%=product.id%>">
               <button type="submit"> Editar
 
               </button>

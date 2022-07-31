@@ -2,55 +2,61 @@
 <html lang="es">
 
 <head>
-  <%- include("../partials/head")%> 
-   <link rel="stylesheet" href="/css/register.css">
-  <link rel="stylesheet" href="/css/productEdit.css" />
+  <%- include("../partials/head")%>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/productEdit.css" />
 
 </head>
 
 <body>
-  <%- include("../partials/header")%> 
+  <%- include("../partials/header")%>
 
-      <main class="main">
-    <form class="form" action="/products/edit/<%= product.id%>?_method=PUT" 
-      method="post">
-      
-      <h2 class="form-title">Modificar producto</h2>
-      <div class="form-field">
-       
-        <input class="form-field__input" type="text" placeholder="Nombre del producto" 
-        id="Nombre del producto" name="product_name" value= "<%=product.product_name?? ''%>" />
-      </div>
-    
-      <div class="form-field">
-        
-        <input class="form-field__input" type="text" placeholder="Editar descripcion" 
-        id="Editar descripcion" name="description" value= "<%=product.description?? ''%>" />
-      </div>
-      <div class="form-field">
-       
-        <input class="form-field__input" type="text" placeholder="Editar precio" 
-        id="Editar precio" name="price" value= "<%=product.price?? ''%>" />
-      </div>
+    <main class="main">
+      <form class="form" action="/products/edit/<%= product.id%>?_method=PUT" method="post"
+        enctype="multipart/form-data">
 
-      <div class="form-field">
-        <label for="image">Subir imagen</label>
-        <input class="form-field__input" type="file" value="Agregar imagen" 
-        id="image" single name="image" value= "<%=product.image?? ''%>" /> 
-    </div>
-     
-    <div class="form-field">
-        <input type="submit" class="form-button" value="Guardar cambios">
-    </div>
-        
-    <a type="button" class="" href="/productAdd"> 
-      <input type="button" class="form-button2" value="Agregar un nuevo producto">  </a> 
-      
-    </form>
+        <h2 class="form-title">Modificar producto</h2>
+        <div class="form-field">
 
-   
-  </main>
-  <%- include("../partials/footer")%> 
+          <input class="form-field__input" type="text" placeholder="Nombre del producto" id="Nombre del producto"
+            name="product_name" value="<%=product.product_name?? ''%>" />
+        </div>
+
+        <div class="form-field">
+
+          <input class="form-field__input" type="text" placeholder="Editar descripcion" id="Editar descripcion"
+            name="description" value="<%=product.description?? ''%>" />
+        </div>
+        <div class="form-field">
+
+          <input class="form-field__input" type="text" placeholder="Editar precio" id="Editar precio" name="price"
+            value="<%=product.price?? ''%>" />
+        </div>
+
+        <div class="form-field">
+          <img src="/img/uploads/<%=product.image %>" alt="<% product.image %>">
+        </div>
+
+        <div class="form-field">
+          <label for="image">Cargar nueva imagen</label>
+        </div>
+        <div class="form-field">
+          <input class="form-field__input" type="file" value="Agregar imagen" id="image" single name="image"
+            value="img/uploads/<%=product.image?? ''%>" />
+        </div>
+
+        <div class="form-field">
+          <input type="submit" class="form-button" value="Guardar cambios">
+        </div>
+
+        <a type="button" class="" href="/products/create">
+          <input type="button" class="form-button2" value="Agregar un nuevo producto"> </a>
+
+      </form>
+
+
+    </main>
+    <%- include("../partials/footer")%>
 </body>
 
 </html>

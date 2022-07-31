@@ -210,7 +210,7 @@ footer.cartBack p {
   }
 
   section#paracaidasCart2 img {
-    width: 100%;
+    max-width: 80%;
     flex-basis: 100px;
     flex-shrink: 0;
   }

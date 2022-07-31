@@ -19,7 +19,7 @@ router.post ("/create", upload.single("image"), productController.create);
 router.get ("/edit/:id", productController.editView);
 
 //Acción de edición, a donde se envía el formulario (TBA)
-router.put("/edit/:id", productController.updateProduct);
+router.put("/edit/:id", upload.single("image"),productController.updateProduct);
 
 // Detalle de un producto particular por ID (TBA) deberia ir al final 
 router.get('/:id', productController.getProductById);

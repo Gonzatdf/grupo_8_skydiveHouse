@@ -100,7 +100,7 @@ body {
   margin-top: 25px;
 }
 .form-field {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   display: flex;
   align-items: center;
@@ -174,10 +174,15 @@ body {
   font-size: 1.1rem;
 }
 
+div.form-field img{
+  width: 60%;
+  border-radius: 10px;
+}
+
 @media (min-width: 768px) {
   .main {
     width: 80%;
-    height: 100vh;
+    height: 125vh;
     margin: 50px auto;
     position: relative;
   }

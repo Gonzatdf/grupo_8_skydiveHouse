@@ -17,11 +17,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 165vh;
   width: 100vw;
   margin: 0;
 }
 
+
+
+.pie-pagina{
+  position: absolute;
+}
 .header {
   width: 100vw;
   padding: 0 15px;
@@ -185,6 +190,10 @@ body {
 }
 
 @media (min-width: 768px) {
+body{
+  height: 115vh;
+}
+
   .main {
     width: 80%;
     /* height: 100vh; */
@@ -244,6 +253,7 @@ body {
   body {
     /* background-size: contain; */
     background-position: center 50px;
+    height: 100vh;
   }
 
   .main {
