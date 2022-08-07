@@ -118,11 +118,17 @@ body {
 }
 
 .form-field {
-  margin-bottom: 30px;
-
+  margin-top: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+div.errorMsg{
+  display: flex;
+  justify-content: center;
+  color: var(--secondary-color);
+  font-weight: 500;
 }
 
 .text-password {
@@ -165,12 +171,30 @@ body {
   color: #fff;
   transition: all 300ms;
   cursor: pointer;
+  margin-top: 5%;
 }
 
-.form-field__label:hover,
+/* .form-field__label:hover */
+
 .form-button:hover {
   background-color: var(--secondary-color);
 }
+
+.form-field__invalid{
+  background-color: var(--secondary-color);
+}
+div.form-field_img{
+display: flex;
+}
+
+/* .form-field_img::before {
+  content: 'Subir foto de perfil';
+} */
+
+/* .form-field_img input[type="file"]{
+  opacity: 0;
+  
+} */ */
 
 .text {
   visibility: hidden

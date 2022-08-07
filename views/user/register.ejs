@@ -2,50 +2,89 @@
 <html lang="es">
 
 <head>
-  <%- include("../partials/head")%> 
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/register.css">
- 
+  <%- include("../partials/head")%>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/register.css">
+
 </head>
 
 <body>
-  <%- include("../partials/header")%> 
-  <main class="main">
-    <form class="form">
-      <h2 class="form-title">Sign up</h2>
-      <div class="form-field">
-        <label class="form-field__label" for="Username"><i class="fa-solid fa-user form-field__icon"></i></label>
-        <input class="form-field__input" type="text" placeholder="Full Name" id="Username">
+  <%- include("../partials/header")%>
+    <main class="main">
+      <form class="form" method="POST" action="/users/register" enctype="multipart/form-data">
+        <h2 class="form-title">Sign up</h2>
+
+        <div class="form-field">
+          <label class="form-field__label <%= locals.errors && errors.fullName ? "form-field__invalid" : null %>"
+          for="Username"><i class="fa-solid fa-user form-field__icon"></i></label>
+          <input class="form-field__input" type="text" placeholder="Full Name" id="Username" name="fullName"  
+          value = "<%= locals.oldData ? oldData.fullName : null  %>">          
+        </div>
+        <% if (locals.errors && errors.fullName) {%>
+          <div class="errorMsg">
+            <%= errors.fullName.msg %>
+          </div>
+          <% } %>
+
+        <div class="form-field">
+          <label class="form-field__label <%= locals.errors && errors.email ? "form-field__invalid" : null %>" 
+            for="email"><i class="fa-regular fa-envelope form-field__icon"></i></label>
+          <input class="form-field__input" type="text" placeholder="E-mail" id="email" name="email"
+          value = "<%= locals.oldData ? oldData.email : null  %>">          
+        </div>
+        <% if (locals.errors && errors.email) {%>
+          <div class="errorMsg">
+            <%= errors.email.msg %>
+          </div>
+          <% } %>
+
+        <div class="form-field">
+          <label class="form-field__label <%= locals.errors ? "form-field__invalid" : null %>" 
+          for="password"><i class="fa-solid fa-lock form-field__icon"></i></label>
+          <input class="form-field__input" type="password" placeholder="Password" id="password" name="pass">         
+        </div>
+        <% if (locals.errors && errors.pass) {%>
+          <div class="errorMsg">
+            <%= errors.pass.msg %>
+          </div>
+          <% } %>
+
+        <div class="form-field">
+          <label class="form-field__label <%= locals.errors ? "form-field__invalid" : null %>" 
+          for="confirm_password"><i class="fa-solid fa-lock form-field__icon"></i></label>
+          <input class="form-field__input" type="password" placeholder="Confirm Password" id="confirm_password"
+            name="confPass">
+        </div>
+        <% if (locals.errors && errors.confPass) {%>
+          <div class="errorMsg">
+            <%= errors.confPass.msg %>
+          </div>
+          <% } %> 
+
+        <div class="form-field_img">
+          <br>
+          <label for="image" >Subir foto de perfil </label>
+          <br><i class="fa-solid fa-image-user"> </i>
+          <input type="file" name="avatar" id="image" single>
+        </div>
+
       </div>
-      <div class="form-field">
-        <label class="form-field__label" for="email"><i class="fa-regular fa-envelope form-field__icon"></i></label>
-        <input class="form-field__input" type="email" placeholder="E-mail" id="email">
-      </div>
-      <div class="form-field">
-        <label class="form-field__label" for="password"><i class="fa-solid fa-lock form-field__icon"></i></label>
-        <input class="form-field__input" type="password" placeholder="Password" id="password">
-      </div>
-      <div class="form-field">
-        <label class="form-field__label" for="confirm_password"><i
-            class="fa-solid fa-lock form-field__icon"></i></label>
-        <input class="form-field__input" type="password" placeholder="Confirm Password" id="confirm_password">
-      </div>
-      <div class="form-field">
-        <br>
-        <label for="image">Subir imagen</label>
-        <br>
-        <input type="file" name="image" id="image" single>
-    </div>
-      <input type="submit" class="form-button" value="Create Account">
-      <!-- <button class="form-button">Create Account</button> -->
+      <% if (locals.errors && errors.avatar) {%>
+        <div class=" errorMsg">
+          <%= errors.avatar.msg %>
+        </div>
+        <% } %> 
+
+        <input type="submit" class="form-button" value="Create Account">
+        <!-- <button class="form-button">Create Account</button> -->
 
 
-    </form>
-    
-  </main>
-  
-  
+      </form>
+
+    </main>
+
+
 </body>
-<%- include("../partials/footer")%> 
+<%- include("../partials/footer")%>
 
 </html>

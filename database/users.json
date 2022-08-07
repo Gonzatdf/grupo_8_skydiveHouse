@@ -1,51 +1,42 @@
-[{
-    "id": 1,
-    "Name": "Rena Gate",
+[
+  {
+    "fullName": "Rena Gate",
     "email": "rgate0@flavors.me",
-    "password": "Od29F6bF8OcM"
-  }, {
-    "id": 2,
-    "Name": "Elwood Langsdon",
+    "pass": "Od29F6bF8OcM",
+    "confPass": "Od29F6bF8OcM",
+    "id": "ff6f9cab-a86d-4c26-8f42-18e122a2aa17",
+    "avatar": "1659897570561.JPG"
+  },
+  {
+    "fullName": "Elwood Langsdon",
     "email": "elangsdon1@dyndns.org",
-    "password": "LZADSSoai"
-  }, {
-    "id": 3,
-    "Name": "Joscelin Chawkley",
+    "pass": "LZADSSoai",
+    "confPass": "LZADSSoai",
+    "id": "1a7c7858-dd9a-460e-975b-5fceba539368",
+    "avatar": "1659897603821.JPG"
+  },
+  {
+    "fullName": "Joscelin Chawkley",
     "email": "jchawkley2@list-manage.com",
-    "password": "5q9HCa"
-  }, {
-    "id": 4,
-    "Name": "Karoly Cousans",
-    "email": "kcousans3@g.co",
-    "password": "kavnNF96"
-  }, {
-    "id": 5,
-    "Name": "Shaylah Harrowell",
+    "pass": "5q9HCa",
+    "confPass": "5q9HCa",
+    "id": "23028101-bd8f-485d-b8bf-4660b84547bd",
+    "avatar": "1659897637827.JPG"
+  },
+  {
+    "fullName": "Shaylah Harrowell",
     "email": "sharrowell4@acquirethisname.com",
-    "password": "vUWr8KdpMR"
-  }, {
-    "id": 6,
-    "Name": "Hunt Haselup",
-    "email": "hhaselup5@godaddy.com",
-    "password": "24QKNBeevD"
-  }, {
-    "id": 7,
-    "Name": "Pauletta Tabour",
-    "email": "ptabour6@guardian.co.uk",
-    "password": "FWIkO4h"
-  }, {
-    "id": 8,
-    "Name": "Garik Horning",
-    "email": "ghorning7@ocn.ne.jp",
-    "password": "x33lgoKZE"
-  }, {
-    "id": 9,
-    "Name": "Ronalda Piffe",
-    "email": "rpiffe8@freewebs.com",
-    "password": "pSGNyDXZrGmY"
-  }, {
-    "id": 10,
-    "Name": "Kim Claibourn",
-    "email": "kclaibourn9@ca.gov",
-    "password": "mgrjFQ"
-  }]
+    "pass": "vUWr8KdpMR",
+    "confPass": "vUWr8KdpMR",
+    "id": "c4f17818-0afe-4bc2-b340-be57535b8089",
+    "avatar": "1659897659446.JPG"
+  },
+  {
+    "fullName": "Juan Perez",
+    "email": "pepe@gmail.com",
+    "pass": "pepeelmejor",
+    "confPass": "pepeelmejor",
+    "id": "659fdcfc-e4b1-4940-afe8-046680ac2a91",
+    "avatar": "1659907593013.JPG"
+  }
+]

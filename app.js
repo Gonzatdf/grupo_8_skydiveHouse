@@ -12,22 +12,16 @@ const userRoutes = require("./routes/userRoutes.js");
 app.set ("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // capturar la info informacion enviada en un formulario por post
 app.use(express.json());//para aclarar que queremos la info guarada en un objeto y convertir a JSON
 app.use(methodOverride('_method'));
 
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
-// app.use ("/productDetail", productRoutes);
-// app.get("/productDetail", productRoutes); // use or get??
-// app.get("/productCart", productRoutes);
-// app.use("/productAdd", productRoutes);
-// app.get("/productAdd", productRoutes);
-// app.get("/productEdit", productRoutes);
 
-
-app.get("/register", userRoutes);
-app.get("/login", userRoutes);
+app.use("/users", userRoutes);
+// app.get("/register", userRoutes);
+// app.get("/login", userRoutes);
 
 
 
