@@ -1,0 +1,25 @@
+
+body {
+    background-image: url('../../img/notFound.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-color: rgb(243, 248, 251);
+}
+
+.logo-PC {
+    display: inline-block;
+    width: 200px;
+    max-width: 250px;
+}
+
+@media (min-width: 620px) {  
+    body {
+        background-image: url('../../img/notFoundPC.jpg');
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(192, 223, 226);
+    }
+
+}

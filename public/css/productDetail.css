@@ -1,13 +1,13 @@
 * {
   font-family: 'Anek Malayalam', sans-serif;
   box-sizing: border-box;
-  font-size: 0.95em;
+
 
 }
 
-body.ProductDetail {
+/* body.ProductDetail {
   background-color: rgb(230, 230, 232);
-}
+} */
 
 
 .altimetro {
@@ -77,18 +77,17 @@ footer p {
   color: rgb(44, 42, 42);
 }
 
+
 @media (min-width: 480px) {
   main {
     /* background-color: white; cambie para unificar criterios */
     display: flex;
     flex-wrap: wrap;
-
     height: 100%;
     margin: 0 auto;
-
     margin-top: 5%;
     justify-content: space-around;
-  }
+      }
 
   .saltoTandem {
     display: inline;
@@ -98,7 +97,7 @@ footer p {
   }
 
   nav.nav-home {
-    background-color: white;
+    background-color: rgb(240, 238, 238);
   }
 
   .altimetro {

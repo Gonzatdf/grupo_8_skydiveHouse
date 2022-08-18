@@ -6,7 +6,7 @@
 :root {
   --primary-color: #2b2a29;
   --secondary-color: #962420;
-  --font: Helvetica, sans-serif;
+  --font: 'Anek Malayalam', sans-serif;
 }
 
 body {
@@ -16,17 +16,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
-  min-height: 100vh;
+  min-height: 110vh;
   margin: 0;
-  overflow: hidden;
+  position: relative;
+  /* overflow: hidden; */
 }
+
+.form {
+  top: 30px;
+}
+
 @media (min-width: 1200px) {
   body {
-    background-size: contain;
+    /* background-size: contain; */
     background-position: center 20px;
   }
   .main {
     max-width: 800px;
+ 
   }
 }

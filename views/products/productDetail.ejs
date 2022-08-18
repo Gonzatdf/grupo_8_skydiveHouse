@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+  <%- include("../partials/head")%>
+  <link rel="stylesheet" href="css/stylesCart.css">
+  <link rel="stylesheet" href="css/productDetail2.css">  
+</head>
+
+<body>
+  <%- include("../partials/header")%>
+    <main>
+      <h4 class="elegir">ELEGI TU PROXIMA AVENTURA..</h4>
+      <div class="allProducts">
+        <% for (let index=0; index <products.length;index++) {%>
+          <article>
+            <a href="/products/<%= products[index].id %>"><img src="/img/uploads/<%= products[index].image %>" alt="<% products.image %>">
+            <div class="productDetail">
+             
+              <h4> <%=products[index].product_name %>              
+               <i class="fa-solid fa-dollar-sign"></i> <%= products[index].price%>
+            </h4>
+         
+              <%= products[index].description%>            
+            </div>
+            <!-- ELIMINAR -->
+            <form class="delete"
+              action="/products/<%= products[index].id %>?_method=DELETE" 
+              method="post">
+              <button class="delete" type="submit" >Eliminar</button>            
+            </form></a>
+          </article>
+                  <% } %>
+            
+      </div>
+    </main>
+
+    <%- include("../partials/footer")%>
+</body>
+</html>

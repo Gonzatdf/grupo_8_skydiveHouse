@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include("../partials/head")%>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/productAdd.css" />
+
+</head>
+
+<body>
+  <%- include("../partials/header")%>
+
+    <main class="main">
+      <form class="form" action="/products/create" method="post" enctype="multipart/form-data">
+
+        <h2 class="form-title">Nuevo producto</h2>
+        <div class="form-field">
+          <input class="form-field__input"type="text" placeholder="Nombre del producto" 
+          id="Nombre del producto" name="product_name"/>
+        </div>
+
+        <div class="form-field">
+          <input class="form-field__input" type="text" placeholder="Agregar descripcion" 
+          id="Agregar descripcion" name="description" />
+        </div>
+        <div class="form-field">
+
+          <input class="form-field__input" type="text" placeholder="Agregar precio" 
+          id="Agregar precio" name="price"/>
+        </div>
+
+        <div class="form-field">
+          <label for="image">Subir imagen</label>
+          <input class="form-field__input" type="file" 
+          id="image" single name="image" accept=".jpg">
+        </div>
+
+        <div class="form-field">
+          <input type="submit" class="form-button" value="Crear">
+        </div>
+
+        <a type="button" class="" href="/products">
+          <input type="button" class="form-button2" value="Editar un producto existente"> </a>
+
+      </form>
+
+
+    </main>
+    <%- include("../partials/footer")%>
+
+</body>
+
+</html>

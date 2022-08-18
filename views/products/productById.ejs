@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+  <%- include("../partials/head")%>
+  <link rel="stylesheet" href="../css/stylesCart.css">
+  <link rel="stylesheet" href="../css/productDetail2.css">   
+</head>
+
+<body>
+  <%- include("../partials/header")%>
+    <main>
+      <h4 class="elegir">ELEGI TU PROXIMA AVENTURA..</h4>
+      <div class="allProducts">
+        
+          <article>
+            <% if (product.image !== "undefined"){ %>         
+          
+            <img src="/img/uploads/<%=product.image %>" alt="<% product.image %>">
+            <%}%>
+            <div class="productDetail">
+              <h4>
+                <%=product.product_name %>
+              </h4>
+              <div class="price">
+                <a href="../products/cart"> <i class="fa-solid fa-cart-shopping" id="cart"></a></i>
+              <i class="fa-solid fa-dollar-sign"></i> <%= product.price%>
+            </div>
+              <%= product.description%> 
+              <form class="edit" action="/products/edit/<%=product.id%>">
+              <button type="submit"> Editar
+
+              </button>
+              </form> 
+              
+            </div>
+            <!-- ELIMINAR -->
+            <!-- <form class="delete"
+              action="/product/< %= product.id %>?_method=DELETE" 
+              method="post">
+              <button class="delete" type="submit" >Eliminar</button>            
+            </form>
+          </article> -->
+      
+            
+      </div>
+    </main>
+
+    <%- include("../partials/footer")%>
+</body>
+</html>

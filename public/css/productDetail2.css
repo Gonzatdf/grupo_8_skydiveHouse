@@ -1,0 +1,104 @@
+* {
+    font-family: 'Anek Malayalam', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+h4.elegir {
+    margin: 10px;
+    padding: 12px 0 0 20px;
+}
+
+main {
+    margin-top: 80px;
+    font-size: large;
+    font-size: 0.95em;
+}
+
+main .allProducts {
+    margin-top: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+}
+    
+main .allProducts a{
+    text-decoration: none;
+    color: black;
+}
+
+
+div.allProducts article{
+    width: 80vw;
+    /* border: 1px solid #8d3535; */
+    padding: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+div.productDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.productDetail h4 i.fa-dollar-sign{
+    margin-left: 20px;
+}
+
+
+div.allProducts article i.fa-dollar-sign {
+right: 5px;
+}
+
+div.allProducts article img {
+width: 100%;
+border-radius: 10px;
+}
+form.delete{
+    display: flex;
+    justify-content: center;
+}
+button.delete {
+        color: white;
+        font-weight: 500;
+        background-color: rgb(150, 36, 32);
+        border-radius: 10px;
+        max-width: 200%;
+        padding: 2px 5px;
+        margin-top: 5px;
+        font-weight: 500;
+        justify-content: center;
+}
+
+form.edit button  {
+    color: white;
+    font-weight: 500;
+    background-color: rgb(2, 128, 54);
+    border-radius: 10px;
+    max-width: 200%;
+    padding: 2px 5px;
+    margin-top: 5px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+@media (min-width: 769px) {
+    div.allProducts {
+        flex-direction: row;  
+    }
+
+    div.allProducts article{
+        width: 46%;
+}
+}
+
+@media (min-width: 1200px) {
+    div.allProducts article{
+        width: 23vw;
+}
+}
