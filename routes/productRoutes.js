@@ -15,7 +15,7 @@ router.get ("/create", productController.createView);
 // Acción de creación, a donde se envía el formulario 
 router.post ("/create", upload.single("image"), productController.create);
 
-// Formulario de edición de productos (in progress) 
+// Formulario de edición de productos
 router.get ("/edit/:id", productController.editView);
 
 //Acción de edición, a donde se envía el formulario 

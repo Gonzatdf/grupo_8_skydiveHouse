@@ -5,6 +5,7 @@ const { platform } = require("os");
 
 const productListPath = path.resolve(__dirname, "../database/products.json");
 const productsList = JSON.parse(fs.readFileSync(productListPath, "utf8"));
+let esAdministrador = false;
 
 let productController = {
   cart: (req, res) => {
@@ -12,16 +13,31 @@ let productController = {
   },
 
   details: (req, res) => {
+    if(req.session.userLogged != undefined && req.session.userLogged.admin != undefined && req.session.userLogged.admin){
+      esAdministrador = true;
+    }else{
+      esAdministrador = false;
+    }
+
     res.render("products/productDetail", {
       products: productsList,
+      esAdministrador: esAdministrador
     });
   },
   getProductById: (req, res) => {
     let id = req.params.id;
     let product = productsList.find((product) => product.id == id);
+
+    if(req.session.userLogged != undefined && req.session.userLogged.admin != undefined && req.session.userLogged.admin){
+      esAdministrador = true;
+    }else{
+      esAdministrador = false;
+    }
+
     if (typeof product !== "undefined") {
       res.render("products/productById", {
         product,
+        esAdministrador
       });
     } else {
       res.status(404).render("notFound.ejs");
@@ -29,7 +45,11 @@ let productController = {
   },
 
   createView: (req, res) => {
-    res.render("products/productCreate.ejs");
+    if(req.session.userLogged != undefined && req.session.userLogged.admin != undefined && req.session.userLogged.admin){
+      res.render("products/productCreate.ejs");
+    }else{
+      res.redirect("/users/login");
+    }
   },
 
   create: (req, res) => {
@@ -46,7 +66,11 @@ let productController = {
     let id = req.params.id;
     let product = productsList.find((product) => product.id == id);
     if (typeof product !== "undefined") {
-      res.render("products/productEdit.ejs", { product });
+      if(req.session.userLogged != undefined && req.session.userLogged.admin != undefined && req.session.userLogged.admin){
+        res.render("products/productEdit.ejs", { product });
+      }else{
+        res.redirect("/users/login");
+      }
     } else {
       res.status(404).render("notFound.ejs");
     }

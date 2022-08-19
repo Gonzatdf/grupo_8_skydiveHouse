@@ -29,19 +29,24 @@
               <%= product.description%> 
 
               <!-- % if (locals.userLogged.admin) {%> FALTA AGREGAR CONDICION P QUE SOLO EL ADMIN LO VEA-->
+              <!--
                 <form class="create" action="/products/create/">
-                  <button type="submit">Crear Nuevo Producto</button>
-                  </form>   
+                <button type="submit">Crear Nuevo Producto</button>
+              </form>-->
+              <% if (esAdministrador) { %>
               <form class="edit" action="/products/edit/<%=product.id%>">
-              <button type="submit">Editar</button>
-              </form>               
+                <button type="submit">Editar</button>
+              </form> 
+              <%}%>              
             </div>
             <!-- ELIMINAR -->
+            <% if (esAdministrador) { %>
             <form class="delete"
             action="/products/<%=product.id %>?_method=DELETE"
               method="post">
               <button class="delete" type="submit" >Eliminar</button>            
             </form>
+            <%}%>
             
           </article>
           

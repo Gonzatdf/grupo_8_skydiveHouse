@@ -11,6 +11,16 @@
   <%- include("../partials/header")%>
     <main>
       <h4 class="elegir">ELEGI TU PROXIMA AVENTURA..</h4>
+
+      <!--Creación de producto, solo podra ser visto por un usuario administrador.-->
+      <% if (esAdministrador) { %>  
+      <div style="margin-left:1.5% ;">
+        <form class="create" action="/products/create/">
+          <button type="submit">Crear Nuevo Producto</button>
+        </form>
+      </div>
+      <%}%>  
+      
       <div class="allProducts">
         <% for (let index=0; index <products.length;index++) {%>
           <article>
