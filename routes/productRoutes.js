@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router(); // funcionalidad de las rutas que ofrece express
 const productController = require("../controllers/productController.js");
 
-const upload = require("../middlewares/multer");
+const upload = require("../middlewares/multerProduct");
 
 router.get ("/cart", productController.cart);
 

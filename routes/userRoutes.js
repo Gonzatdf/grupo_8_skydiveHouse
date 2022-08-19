@@ -1,28 +1,24 @@
 const express = require("express");
 const router = express.Router(); // funcionalidad de las rutas que ofrece express
 const userController = require("../controllers/userController.js");
-const upload = require("../middlewares/multer");
-// const path = require ("path");
+const upload = require("../middlewares/multerUser");
+const alreadyLoggedMid = require("../middlewares/alreadyLoggedMid");
+const authMid = require("../middlewares/authMid"); 
+
 const RegisterValidation = require ("../middlewares/RegisterValidations");
 
+router.get ("/login", alreadyLoggedMid, userController.login);
 
-// const storage = multer.diskStorage({
-//     destination:(req,file, cb) => {
-//         cb (null, "./public/img/uploads/avatars", );
-//     },
-//     filename:(req,file, cb) =>{
-//         let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
-//         cb (null, fileName)
-//     }
-// })
-// const uploadFile = multer ({storage})
+router.post ("/login", userController.loginProcess);
 
-
-
-router.get ("/login", userController.login);
-
-router.get ("/register", userController.register);
+router.get ("/register", alreadyLoggedMid, userController.register);
 
 router.post ("/register", upload.single ("avatar"), RegisterValidation, userController.processRegister);
+
+//Perfil de usuario
+router.get ("/profile", authMid, userController.profileView);
+
+//Log out
+router.get ("/logout", userController.logout);
 
 module.exports = router;

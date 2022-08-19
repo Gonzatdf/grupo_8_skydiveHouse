@@ -1,18 +1,25 @@
 <header>
+ 
 <nav class="nav-home">
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
       <i class="fa-solid fa-bars"></i>
     </label>
     <a href="/"><img class="logo-PC" src="../../img/logo-red-removebg2.png" alt="logo-nav-pc" /></a>
-    <a href="/"><img class="logo-phone" src="../../img/logowhite-removebg.png" alt="logo-nav-PC" /></a>
+    <a href="/"><img class="logo-phone" src="../../img/logowhite-removebg.png" alt="logo-nav-PC" /></a>    
     <ul>
+      <img class="paracaidas-color" src="../../img/paracaidas-menu-removebg.png" alt="paracaidas">
       <li><a class="active" href="/">NOSOTROS</a></li>
       <li><a class="active" href="/products">RESERVA TU SALTO</a></li>
-      <li><a class="active" href="/users/register">REGISTRATE</a></li>
-      <li><a href="/users/login"> <i class="fa-solid fa-user-astronaut" id="user"></a></i></li>
+      <% if (locals.isLogged) { %>      
       <li><a href="../products/cart"><i class="fa-solid fa-cart-shopping" id="cart"></a></i></li>
-      <img class="paracaidas-color" src="../../img/paracaidas-menu-removebg.png" alt="paracaidas">
+      <a href="/users/profile"> <img class="imgProfNav" src="../../img/uploads/avatars/<%=locals.userLogged.avatar%>" alt="<%locals.userLogged.avatar%>"> </a>
+   
+      <% }else { %>
+        <li><a class="active" href="/users/register">REGISTRATE</a></li> 
+        <li><a href="/users/login"> <i class="fa-solid fa-user-astronaut" id="user"></a></i></li>     
+      <% } %>
+      
     </ul>
   </nav>
 </header>

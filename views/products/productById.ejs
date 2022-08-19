@@ -16,7 +16,7 @@
           <article>
             <% if (product.image !== "undefined"){ %>         
           
-            <img src="/img/uploads/<%=product.image %>" alt="<% product.image %>">
+            <img src="/img/uploads/products/<%=product.image %>" alt="<% product.image %>">
             <%}%>
             <div class="productDetail">
               <h4>
@@ -27,20 +27,24 @@
               <i class="fa-solid fa-dollar-sign"></i> <%= product.price%>
             </div>
               <%= product.description%> 
-              <form class="edit" action="/products/edit/<%=product.id%>">
-              <button type="submit"> Editar
 
-              </button>
-              </form> 
-              
+              <!-- % if (locals.userLogged.admin) {%> FALTA AGREGAR CONDICION P QUE SOLO EL ADMIN LO VEA-->
+                <form class="create" action="/products/create/">
+                  <button type="submit">Crear Nuevo Producto</button>
+                  </form>   
+              <form class="edit" action="/products/edit/<%=product.id%>">
+              <button type="submit">Editar</button>
+              </form>               
             </div>
             <!-- ELIMINAR -->
-            <!-- <form class="delete"
-              action="/product/< %= product.id %>?_method=DELETE" 
+            <form class="delete"
+            action="/products/<%=product.id %>?_method=DELETE"
               method="post">
               <button class="delete" type="submit" >Eliminar</button>            
             </form>
-          </article> -->
+            
+          </article>
+          
       
             
       </div>

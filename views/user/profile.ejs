@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head")%>
+        <link rel="stylesheet" href="../css/stylesCart.css">
+        <link rel="stylesheet" href="../css/productDetail2.css">
+</head>
+
+<body>
+    <%- include("../partials/header")%>
+        <main>
+            <div class="profile">
+            <img src="/img/uploads/avatars/<%=user.avatar%>" alt="<%user.avatar%>">
+            <div>
+                <h4>
+                    Hi <%=user.fullName %>
+                </h4>
+                <div>
+                    <%= user.email%>
+                </div>
+                <div>
+                    <form action="/users/logout" method="get">
+                    <input type="submit" class="form-button" value="Log out">
+                </form>
+                </div>
+            </div>
+        </main>
+
+        <%- include("../partials/footer")%>
+</body>
+
+</html>

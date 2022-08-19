@@ -6,7 +6,7 @@ const registerValidations = [
     body("fullName").notEmpty().withMessage ("Ingresar el nombre completo"),
     body("email").notEmpty().withMessage ("Ingresar un email").bail().isEmail().withMessage("Ingresar email valido"),
     body("pass").notEmpty().withMessage ("Definir una contraseña"),
-    body("confPass").notEmpty().withMessage ("Confirmar la contraseña"),
+    // body("confPass").notEmpty().withMessage ("Confirmar la contraseña"),
     body ("avatar").custom((value, {req}) => {
         let file = req.file 
         let acceptedExtensions = [".jpg", ".png", ".gif", ".JPG"]               

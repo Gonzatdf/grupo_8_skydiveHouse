@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const session = require("express-session");
+const userLoggedMid = require("./middlewares/userLoggedMid");
 const path = require("path");
 const methodOverride = require('method-override'); // para poder utilizar los formularios con PUT
 
@@ -10,7 +12,16 @@ const userRoutes = require("./routes/userRoutes.js");
 
 
 app.set ("view engine", "ejs");
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: "Shh..",
+  resave: false,
+  saveUninitialized: false,
+
+}));
+
+app.use(userLoggedMid); // debe ir despues del session
 
 app.use(express.urlencoded({ extended: true })); // capturar la info informacion enviada en un formulario por post
 app.use(express.json());//para aclarar que queremos la info guarada en un objeto y convertir a JSON
@@ -20,8 +31,6 @@ app.use("/", mainRoutes);
 app.use("/products", productRoutes);
 
 app.use("/users", userRoutes);
-// app.get("/register", userRoutes);
-// app.get("/login", userRoutes);
 
 
 

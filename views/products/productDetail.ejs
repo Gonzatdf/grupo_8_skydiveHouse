@@ -14,7 +14,7 @@
       <div class="allProducts">
         <% for (let index=0; index <products.length;index++) {%>
           <article>
-            <a href="/products/<%= products[index].id %>"><img src="/img/uploads/<%= products[index].image %>" alt="<% products.image %>">
+            <a href="/products/<%= products[index].id %>"><img src="/img/uploads/products/<%= products[index].image %>" alt="<% products.image %>">
             <div class="productDetail">
              
               <h4> <%=products[index].product_name %>              
@@ -24,11 +24,11 @@
               <%= products[index].description%>            
             </div>
             <!-- ELIMINAR -->
-            <form class="delete"
+            <!-- <form class="delete"
               action="/products/<%= products[index].id %>?_method=DELETE" 
               method="post">
               <button class="delete" type="submit" >Eliminar</button>            
-            </form></a>
+            </form></a> -->
           </article>
                   <% } %>
             
