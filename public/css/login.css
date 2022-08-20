@@ -124,13 +124,6 @@ body {
   justify-content: center;
 }
 
-div.errorMsg{
-  display: flex;
-  justify-content: center;
-  color: var(--secondary-color);
-  font-weight: 500;
-}
-
 .text-password {
   text-align: right;
 }

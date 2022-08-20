@@ -3,6 +3,9 @@ const fs = require("fs");
 const path = require("path");
 const { platform } = require("os");
 
+const {validationResult} = require ("express-validator");
+const Product = require("../models/Products")
+
 const productListPath = path.resolve(__dirname, "../database/products.json");
 const productsList = JSON.parse(fs.readFileSync(productListPath, "utf8"));
 let esAdministrador = false;
@@ -52,6 +55,23 @@ let productController = {
   },
 
   create: (req, res) => {
+    let productInDB = Product.findByField("product_name", req.body.product_name);
+    if (productInDB) {
+      return res.render ("products/productCreate.ejs", {
+        errors: {
+          product_name:{
+            msg :"Este producto ya esta registrado"
+        }
+      },
+      oldData:req.body
+    });
+  }
+
+  const resultValidation = validationResult (req);
+    if (resultValidation.errors.length > 0) {
+      return res.render ("products/productCreate",{ errors: resultValidation.mapped(), 
+      oldData: req.body}) //mapped: convertir el array a objeto
+    } else {
     let newProduct = req.body;
     let image = req.file.filename;
     newProduct.id = uuidv4(); // el ID no viene del formulario, debe crearse
@@ -59,14 +79,15 @@ let productController = {
     productsList.push(newProduct);
     fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
     res.redirect("/products");
-  },
+  }
+},
 
   editView: (req, res) => {
     let id = req.params.id;
     let product = productsList.find((product) => product.id == id);
     if (typeof product !== "undefined") {
       if(req.session.userLogged != undefined && req.session.userLogged.admin != undefined && req.session.userLogged.admin){
-        res.render("products/productEdit.ejs", { product });
+        res.render("products/productEdit.ejs", {product});
       }else{
         res.redirect("/users/login");
       }
@@ -76,7 +97,7 @@ let productController = {
   },
 
   updateProduct: (req, res) => {
-    let id = req.params.id;
+        let id = req.params.id;
     //buscar producto con id en el json
     let productToEdit = productsList.find((product) => {
       return product.id == id;

@@ -5,7 +5,7 @@ const upload = require("../middlewares/multerUser");
 const alreadyLoggedMid = require("../middlewares/alreadyLoggedMid");
 const authMid = require("../middlewares/authMid"); 
 
-const RegisterValidation = require ("../middlewares/RegisterValidations");
+const registerValidation = require ("../middlewares/RegisterValidations");
 
 router.get ("/login", alreadyLoggedMid, userController.login);
 
@@ -13,7 +13,7 @@ router.post ("/login", userController.loginProcess);
 
 router.get ("/register", alreadyLoggedMid, userController.register);
 
-router.post ("/register", upload.single ("avatar"), RegisterValidation, userController.processRegister);
+router.post ("/register", upload.single ("avatar"), registerValidation, userController.processRegister);
 
 //Perfil de usuario
 router.get ("/profile", authMid, userController.profileView);
