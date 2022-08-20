@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.profile {
+    margin: 20px;
+}
+
+div.profile img {
+    border-radius: 50%;
+    max-width: 80%;
+    flex-basis: 100px;
+
+}
+
+.form-button {
+    width: 85%;
+    height: 40px;
+    border-radius: 15px;
+    background-color: gray;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: all 300ms;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.form-button:hover {
+    background-color: #962420;
+}

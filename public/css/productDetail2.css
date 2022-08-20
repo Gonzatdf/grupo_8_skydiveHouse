@@ -87,6 +87,24 @@ form.edit button  {
     justify-content: center;
 }
 
+.form-button {
+    width: 20%;
+    height: 40px;
+    border-radius: 15px;
+    background-color: gray;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: all 300ms;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.form-button:hover {
+    background-color: #962420;
+}
+
 @media (min-width: 769px) {
     div.allProducts {
         flex-direction: row;  

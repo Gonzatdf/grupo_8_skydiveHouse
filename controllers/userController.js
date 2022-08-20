@@ -77,7 +77,9 @@ let userController = {
 
   logout: (req,res) => {
     req.session.destroy();
-    return res.redirect ("/")
+    return res.redirect ("/users/login")
+    // req.session.userLoged = null;
+    // res.redirect("/users/login");
   }
 
 }

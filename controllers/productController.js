@@ -18,7 +18,6 @@ let productController = {
     }else{
       esAdministrador = false;
     }
-
     res.render("products/productDetail", {
       products: productsList,
       esAdministrador: esAdministrador

@@ -16,7 +16,7 @@
       <% if (esAdministrador) { %>  
       <div style="margin-left:1.5% ;">
         <form class="create" action="/products/create/">
-          <button type="submit">Crear Nuevo Producto</button>
+          <button class="form-button" type="submit">Crear Nuevo Producto</button>
         </form>
       </div>
       <%}%>  
@@ -25,22 +25,21 @@
         <% for (let index=0; index <products.length;index++) {%>
           <article>
             <a href="/products/<%= products[index].id %>"><img src="/img/uploads/products/<%= products[index].image %>" alt="<% products.image %>">
-            <div class="productDetail">
-             
+            <div class="productDetail">             
               <h4> <%=products[index].product_name %>              
                <i class="fa-solid fa-dollar-sign"></i> <%= products[index].price%>
-            </h4>
-         
-              <%= products[index].description%>            
+            </h4>         
+              <%= products[index].description%>           
+             
             </div>
             <!-- ELIMINAR -->
             <!-- <form class="delete"
-              action="/products/<%= products[index].id %>?_method=DELETE" 
+              action="/products/%= products[index].id %>?_method=DELETE" 
               method="post">
               <button class="delete" type="submit" >Eliminar</button>            
             </form></a> -->
           </article>
-                  <% } %>
+          <% } %>   
             
       </div>
     </main>
