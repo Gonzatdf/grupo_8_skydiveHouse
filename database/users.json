@@ -15,5 +15,12 @@
     "passSinCryp": "pass321",
     "id": "5c7fa321-f56b-4330-9a1a-cc2eae4156f1",
     "avatar": "1660877673874.JPG"
+  },
+  {
+    "fullName": "Lucia Haidr",
+    "email": "lh@lh.com",
+    "pass": "$2a$10$plQESuWQwEypWvq34ZEl1OzJ7QxRkZ/6BHPDXWq7S9V2vdVmqQuu2",
+    "id": "c1fea689-d2ff-4ada-8319-37b578300e80",
+    "avatar": "1661004674424.jpg"
   }
 ]

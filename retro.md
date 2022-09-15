@@ -52,3 +52,43 @@ Desaparecer sin avisar al equipo, para evitar contratiempos.
 
 **Dejar de hacer..**
 
+ -------------------------------------------- SPRINT 5 -------------------------------------------
+
+**Comenzar a hacer..**
+reunirnos para definir ciertos criterios de base, antes de comenzar. Esta planteado desde el primer sprint pero no lo hemos podido hacer.
+
+
+**Hacer más..**
+Mas reuniones de sync, y soporte en general a quien lo necesite, aunque lo hemos realizado entre algunos miembros.
+
+
+**Continuar haciendo..**
+Seguir trabajando en las ramas de git, y practicar resolucion de conflictos.
+
+
+**Hacer menos..**
+Desaparecer sin avisar al equipo, para evitar contratiempos.
+
+
+**Dejar de hacer..**
+
+-------------------------------------------- SPRINT 6 -------------------------------------------
+
+**Comenzar a hacer..**
+reunirnos para definir ciertos criterios de base, antes de comenzar. Esta planteado desde el primer sprint pero no lo hemos podido hacer.
+
+
+**Hacer más..**
+Mantener actualziado al equipo de situaciones personales que pueden comprometer la entrega del trabajo.
+
+
+**Continuar haciendo..**
+Mantenernos comunicados como equipo.
+
+
+**Hacer menos..**
+Desaparecer sin avisar al equipo, para evitar contratiempos.
+
+
+**Dejar de hacer..**
+
