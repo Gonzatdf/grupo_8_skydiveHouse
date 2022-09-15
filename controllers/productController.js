@@ -28,6 +28,9 @@ let productController = {
         }else{
           esAdministrador = false;
         }
+
+        console.log("Es administrador: " + esAdministrador);
+        console.log("session: " + req.session)
         res.render("products/productDetail", {
           products: productsList,
           esAdministrador: esAdministrador
@@ -48,6 +51,9 @@ let productController = {
         }else{
           esAdministrador = false;
         }
+
+        console.log("Es administrador: " + esAdministrador);
+        console.log("userLogged getProductByID: " + req.session.userLogged)
     
         if (typeof product !== "undefined" && product != null) {
           res.render("products/productById", {
@@ -84,7 +90,10 @@ let productController = {
     }).then(product =>{
       newProduct = product;
       productsList.push(newProduct);
+      
+      /*
       fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
+      */
       res.redirect("/products");
     }).catch(error =>{
       console.log("Error al momento de crear un producto", error);
@@ -139,13 +148,17 @@ let productController = {
           }).then(product => {
             editProduct.id = id
 
+            /*
+            //Se comenta ya que estaba ocasionando problemas con la sesion haciendo que se perdiera al actualizar, crear o eliminar.
             for (let index = 0; index < productsList.length; index++) {
                 if (productsList[index].id == id) {
                   productsList[index] = editProduct;
                 }
             }    
             fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
-
+            //Fin del comentario.
+            */
+            console.log("Admin en el actualizar: " + req.session.userLogged.admin);
             res.redirect("/products");
           }).catch(error =>{
             console.log("Error al intentar modificar el producto con id " + id, error);
@@ -171,6 +184,7 @@ let productController = {
             }      
           }).then(() => {
 
+            /*
             for (let index = 0; index < productsList.length; index++) {
               const element = productsList[index];
               if (element.id == id) {
@@ -179,7 +193,8 @@ let productController = {
             }
 
             fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
-        
+            */
+
             res.redirect("/products");
           })
 
