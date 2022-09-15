@@ -52,22 +52,24 @@ let userController = {
         delete userLogin.pass;
         req.session.userLogged = userLogin;
         res.redirect("/users/profile");
+      }else{
+        return res.render ("user/login", {
+          errors: {
+            email: {
+              msg: "Las credenciales no son validas"
+            }
+          }
+          });
       }
-    return res.render ("user/login", {
+    }else{
+      return res.render ("user/login", {
       errors: {
         email: {
-          msg: "Las credenciales no son validas"
+          msg: "Email no esta registrado"
         }
       }
       });
     }
-    return res.render ("user/login", {
-    errors: {
-      email: {
-        msg: "Email no esta registrado"
-      }
-    }
-    });
   },
 
   profileView: (req, res) => {
