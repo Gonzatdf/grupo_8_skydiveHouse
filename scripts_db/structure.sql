@@ -1,0 +1,25 @@
+/*CREAR BASE DE DATOS SKY_DIVE_HOUSE*/
+CREATE database SKYDIVE_HOUSE;
+
+USE SKYDIVE_HOUSE;
+
+create user 'skydive_house' identified by 'Admin';
+grant all on SKYDIVE_HOUSE.* to 'skydive_house';
+
+CREATE TABLE products(
+id TINYINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+product_name VARCHAR(255) NOT NULL,
+description VARCHAR(500) NOT NULL,
+price DECIMAL(19,2) NOT NULL,
+image VARCHAR(100) NULL
+);
+
+CREATE TABLE users(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+fullname VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL,
+pass VARCHAR(100) NOT NULL,
+pass_sin_cryp VARCHAR(20) NOT NULL,
+avatar VARCHAR(50) NULL,
+admin TINYINT(1) NOT NULL
+);
