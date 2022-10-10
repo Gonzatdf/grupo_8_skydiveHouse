@@ -5,6 +5,7 @@ const { platform } = require("os");
 const db = require('../src/database/models');
 const Product = require("../src/database/models/Product");
 const sequelize = db.sequelize;
+const {validationResult} = require ("express-validator");
 
 const productListPath = path.resolve(__dirname, "../database/products.json");
 //const productsList = JSON.parse(fs.readFileSync(productListPath, "utf8"));
@@ -79,26 +80,37 @@ let productController = {
   },
 
   create: (req, res) => {
-    let newProduct = req.body;
-    let image = req.file.filename;
-
-    db.Product.create({
-      product_name: newProduct.product_name,
-      description: newProduct.description,
-      price: newProduct.price,
-      image: image
-    }).then(product =>{
-      newProduct = product;
-      productsList.push(newProduct);
-      
-      /*
-      fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
-      */
-      res.redirect("/products");
-    }).catch(error =>{
-      console.log("Error al momento de crear un producto", error);
-    })
     
+    const resultValidation = validationResult (req);
+    if (resultValidation.errors.length > 0) {
+      
+      return res.render ("products/productCreate",{ errors: resultValidation.mapped(), 
+        oldData: req.body}) //mapped: convertir el array a objeto
+        
+    } else{
+      let newProduct = req.body;
+      let image = req.file.filename;
+
+      db.Product.create({
+        product_name: newProduct.product_name,
+        description: newProduct.description,
+        price: newProduct.price,
+        image: image
+      }).then(product =>{
+        newProduct = product;
+        productsList.push(newProduct);
+        
+        /*
+        fs.writeFileSync(productListPath, JSON.stringify(productsList, null, 2));
+        */
+        res.redirect("/products");
+
+      }).catch(error =>{
+
+        console.log("Error al momento de crear un producto", error);
+        
+      })
+    }
   },
 
   editView: (req, res) => {
@@ -122,18 +134,32 @@ let productController = {
   },
 
   updateProduct: (req, res) => {
+
     let id = req.params.id;
     let editProduct = req.body;
+    editProduct.id = id;
 
     //Buscar producto con id en BD
     db.Product.findByPk(id)
-      .then(productToEdit => {
+    .then(productToEdit => {
 
-        if (req.file == undefined){
-          editProduct.image = productToEdit.image
-        }else {
-          editProduct.image = req.file.filename
-        }
+      if (req.file == undefined){
+        editProduct.image = productToEdit.image
+      }else {
+        editProduct.image = req.file.filename
+      }
+
+      req.file = productToEdit.image;
+
+      const resultValidation = validationResult (req);
+      if (resultValidation.errors.length > 0) {
+        
+        console.log(editProduct.id);
+
+        return res.render ("products/productEdit",{ errors: resultValidation.mapped(), 
+          oldData: req.body, product: editProduct}) //mapped: convertir el array a objeto
+          
+      } else{
 
         if(typeof productToEdit !== "undefined" && productToEdit != null){
           db.Product.update({
@@ -165,9 +191,13 @@ let productController = {
           })
         }
 
-      }).catch(error => {
-        console.log("Error al consultar el producto con id " + id, error);
-      })
+      }
+
+    }).catch(error => {
+      console.log("Error al consultar el producto con id " + id, error);
+    })
+
+    
   },
 
   deleteProduct: (req, res) => {

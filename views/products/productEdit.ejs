@@ -20,6 +20,8 @@
 
           <input class="form-field__input" type="text" placeholder="Nombre del producto" id="Nombre del producto"
             name="product_name" value="<%=product.product_name?? ''%>" />
+
+          <input id="prodOldImage" name="prodOldImage" type="hidden" value="<%=product.image?? ''%>" />
         </div>
 
         <% if (locals.errors && errors.product_name) {%>
