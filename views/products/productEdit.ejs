@@ -12,7 +12,7 @@
   <%- include("../partials/header")%>
 
     <main class="main">
-      <form class="form" action="/products/edit/<%=product.id%>?_method=PUT" method="post"
+      <form class="form" id="editProductForm" action="/products/edit/<%=product.id%>?_method=PUT" method="post"
         enctype="multipart/form-data">
 
         <h2 class="form-title">Modificar producto</h2>
@@ -77,6 +77,8 @@
 
     </main>
     <%- include("../partials/footer")%>
+
+    <script src="/js/updateProductValidationForm.js"></script>
 </body>
 
 </html>
