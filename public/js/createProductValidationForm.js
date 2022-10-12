@@ -10,9 +10,9 @@ window.onload = function(){
     let imageValue = document.getElementById("image")
 
     let acceptedExtensions = [".jpg", ".png", ".gif", ".JPG"];
-
+    
     form.addEventListener('submit', (evt) => {
-
+        
         if(productNameValue.value == "" || productNameValue.value == null || productNameValue.value.length < 1){
             alert("El nombre del producto es obligatorio.");
             evt.preventDefault();
@@ -34,17 +34,17 @@ window.onload = function(){
         if(imageValue.value == "" || imageValue.value == null || imageValue.value == undefined){
             alert("Subir una imagen del producto");
             evt.preventDefault();
-        }else {
-            let fileExtension = getExtension(imageValue.value);
-            if (!acceptedExtensions.includes(fileExtension)){
-                alert("Las extensiones permitidas son jpg, png y gif");
-                evt.preventDefault();
-            }
         }
-
-     });
-}
-function getExtension(value) {
-    let ext = value.split(".");
-    return ext[1];
-}    
+        let fileExtension = getExtension(imageValue.value);
+        if (!acceptedExtensions.includes(fileExtension)){
+            alert("Las extensiones permitidas son jpg, png y gif");
+            evt.preventDefault();
+        }
+        
+    });
+    
+  function getExtension(value) {
+  let ext = value.split(".");
+  return ext[1];
+  }
+}  

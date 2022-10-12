@@ -41,23 +41,20 @@ window.onload = function () {
       alert("El precio es obligatorio.");
       evt.preventDefault();
     }
-   /*  let fileOld = req.body.prodOldImage;
-
-    let file = req.file 
-    let acceptedExtensions = [".jpg", ".png", ".gif", ".JPG"]               
-
-    let fileExtension = null;
-    if (!file) {
-        file = fileOld;
-        fileExtension = path.extname(file);
-    }else{
-        fileExtension = path.extname(file.originalname);
+    console.log("la validacion es" + editImageValue.value != "" &&
+    editImageValue.value != null &&
+    editImageValue.value.length > 0);
+    if (
+      editImageValue.value != "" &&
+      editImageValue.value != null &&
+      editImageValue.value.length > 0
+    ) {
+      let fileExtension = getExtension(editImageValue.value);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        alert("Las extensiones permitidas son jpg, png y gif");
+        evt.preventDefault();
+      }
     }
-    
-    if (!acceptedExtensions.includes(fileExtension)) {
-      alert("Las extensiones permitidas son jpg, png y gif");
-      evt.preventDefault();
-    } */
   });
 };
 function getExtension(value) {
