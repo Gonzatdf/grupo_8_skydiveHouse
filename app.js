@@ -11,6 +11,11 @@ const productRoutes = require("./routes/productRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
 
 
+const usersApiRoutes = require('./routes/api/usersApiRoutes');
+const productsApiRoutes = require('./routes/api/productsApiRoutes');
+
+
+
 app.set ("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -32,11 +37,12 @@ app.use("/products", productRoutes);
 
 app.use("/users", userRoutes);
 
-
+app.use('/api/users', usersApiRoutes); 
+app.use('/api/products', productsApiRoutes);
 
 app.use ((req,res,next) => {
     res.status (404).render("notFound.ejs");
   });
-  
 
+  
 app.listen(PORT, () => console.log("http://localhost:" + PORT));

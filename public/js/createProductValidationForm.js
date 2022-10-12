@@ -36,7 +36,7 @@ window.onload = function(){
             evt.preventDefault();
         }
         let fileExtension = getExtension(imageValue.value);
-        if (!acceptedExtensions.includes(fileExtension)){
+        if (!acceptedExtensions.includes("." + fileExtension)){
             alert("Las extensiones permitidas son jpg, png y gif");
             evt.preventDefault();
         }

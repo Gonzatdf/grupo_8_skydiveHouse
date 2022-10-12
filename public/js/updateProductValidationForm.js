@@ -50,7 +50,7 @@ window.onload = function () {
       editImageValue.value.length > 0
     ) {
       let fileExtension = getExtension(editImageValue.value);
-      if (!acceptedExtensions.includes(fileExtension)) {
+      if (!acceptedExtensions.includes("." + fileExtension)) {
         alert("Las extensiones permitidas son jpg, png y gif");
         evt.preventDefault();
       }
