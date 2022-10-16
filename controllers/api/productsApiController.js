@@ -7,7 +7,7 @@ const productsApiController = {
         .then(products=>{
             let resp = {
                 count: products.length, 
-                users: products.map(product => {
+                products: products.map(product => {
                     return{
                         id: product.id,
                         name: product.product_name,
@@ -32,6 +32,20 @@ const productsApiController = {
                 urlImage: "/img/uploads/products/" + product.image
             }
             res.json(resp)
+        })
+    },
+    
+    lastProduct:(req,res)=>{
+        db.Product.findAll({order:[["id", "DESC"]], limit:1})
+        .then(product => {
+
+            let resp= {
+                data: product[0]
+            }
+            res.json(resp)
+        })
+        .catch(function(error){
+            res.json({status:500})
         })
     }
 }
