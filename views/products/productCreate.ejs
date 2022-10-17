@@ -23,7 +23,9 @@
           <div class="errorMsg">
             <%= errors.product_name.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorProductName"></div>
+        <%}%>
 
         <div class="form-field">
           <input class="form-field__input" type="text" placeholder="Agregar descripcion" 
@@ -34,7 +36,9 @@
           <div class="errorMsg">
             <%= errors.description.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorDescription"></div>
+        <%}%>
 
         <div class="form-field">
 
@@ -46,7 +50,9 @@
           <div class="errorMsg">
             <%= errors.price.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorPrice"></div>
+        <%}%>
 
 
         <div class="form-field">
@@ -59,7 +65,9 @@
           <div class=" errorMsg">
             <%= errors.image.msg %>
           </div>
-          <% } %> 
+        <% }else{ %>
+          <div id="errorImageProduct"></div>
+        <%}%>
 
         <div class="form-field">
           <input type="submit" class="form-button" value="Crear">

@@ -14,6 +14,8 @@ const userRoutes = require("./routes/userRoutes.js");
 const usersApiRoutes = require('./routes/api/usersApiRoutes');
 const productsApiRoutes = require('./routes/api/productsApiRoutes');
 
+const cors = require("cors");
+
 
 
 app.set ("view engine", "ejs");
@@ -39,6 +41,8 @@ app.use("/users", userRoutes);
 
 app.use('/api/users', usersApiRoutes); 
 app.use('/api/products', productsApiRoutes);
+
+app.use(cors());
 
 app.use ((req,res,next) => {
     res.status (404).render("notFound.ejs");

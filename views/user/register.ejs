@@ -24,7 +24,9 @@
           <div class="errorMsg">
             <%= errors.fullName.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorFullName"></div>
+        <%}%>
 
         <div class="form-field">
           <label class="form-field__label <%= locals.errors && errors.email ? "form-field__invalid" : null %>" 
@@ -36,7 +38,9 @@
           <div class="errorMsg">
             <%= errors.email.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorEmail"></div>
+        <%}%>
 
         <div class="form-field">
           <label class="form-field__label <%= locals.errors ? "form-field__invalid" : null %>" 
@@ -47,7 +51,9 @@
           <div class="errorMsg">
             <%= errors.pass.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorPass"></div>
+        <%}%>
 
         <div class="form-field_img">
           <br>
@@ -61,7 +67,9 @@
         <div class="errorMsg">
           <%= errors.avatar.msg %>
         </div>
-        <% } %> 
+      <% }else{ %>
+        <div id="errorAvatar"></div>
+      <%}%> 
 
         <input type="submit" class="form-button" value="Create Account">
         <!-- <button class="form-button">Create Account</button> -->

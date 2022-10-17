@@ -28,7 +28,9 @@
           <div class="errorMsg">
             <%= errors.product_name.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorProductName"></div>
+        <%}%>
 
         <div class="form-field">
 
@@ -40,7 +42,9 @@
           <div class="errorMsg">
             <%= errors.description.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorDescription"></div>
+        <%}%>
         <div class="form-field">
 
           <input class="form-field__input" type="text" placeholder="Editar precio" id="Editar precio" name="price"
@@ -51,7 +55,9 @@
           <div class="errorMsg">
             <%= errors.price.msg %>
           </div>
-          <% } %>
+        <% }else{ %>
+          <div id="errorPrice"></div>
+        <%}%>
 
         <div class="form-field">
           <img src="/img/uploads/products/<%=product.image %>" alt="<% product.image %>">
@@ -64,6 +70,7 @@
           <input class="form-field__input" type="file" value="Agregar imagen" id="image" single name="image"
             value="img/uploads/products/<%=product.image?? ''%>" />
         </div>
+        <div id="errorImageProduct"></div>
 
         <div class="form-field">
           <input type="submit" class="form-button" value="Guardar cambios">

@@ -24,19 +24,21 @@
           <input class="form-field__input" type="text" placeholder="E-mail" id="email" name="email"
           value = "<%= locals.oldData ? oldData.email : null  %>">          
         </div>
-        <% if (locals.errors && errors.email) {%>
-          <div class="errorMsg">
-            <%= errors.email.msg %>
-          </div>
-          <% } %>
-        
-
       </div>
+      <% if (locals.errors && errors.email) {%>
+        <div class="errorMsg">
+          <%= errors.email.msg %>
+        </div>
+      <% }else{ %>
+        <div id="errorEmail"></div>
+      <%}%>
       <div class="form-field">
         <label class="form-field__label" for="confirm_password"><i
             class="fa-solid fa-lock form-field__icon"></i></label>
         <input class="form-field__input" type="password" placeholder="Confirm Password" id="confirm_password" name="pass" />
       </div>
+      <div id="errorPass"></div>
+      
       <p class="text-password">
         <!-- <i class="fa-regular fa-envelope form-field__icon icono_sobre"></i>Forget password? -->
       </p>
