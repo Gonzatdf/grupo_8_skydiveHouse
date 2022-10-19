@@ -104,7 +104,7 @@ let userController = {
         return res.render ("user/login", {
         errors: {
           email: {
-            msg: "Email no esta registrado"
+            msg: "Las credenciales no son validas"
           }
         }
         });

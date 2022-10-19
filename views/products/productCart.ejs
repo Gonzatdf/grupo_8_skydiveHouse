@@ -6,59 +6,65 @@
     <link rel="stylesheet" href="/css/stylesCart.css">
 </head>
 
-<body class="productCart">
+<body class="productCart" style="backdrop-filter: blur(10px);">
     <header>
         <%- include("../partials/header")%> 
     </header>
-    <main class="cartBack1">
-        <section id="paracaidasCart2">
-            <div>
-                <img style="height: 80%; width: 80%;" src="/img/cart2v2.jpg" alt="paracaidasCart">
+        <main class="cartBack1">
+            <div id="container" class="filter">
+                <div class="info">
+                    <h1>Paciencia,en Construcción :)</h1>
+                </div>
             </div>
-        </section>
-        <section id="calender-total2">
-            <section id="PPCT-calendar3">
-                <div id="PPCT">                   
-                    <table>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Total</th>
-                        </tr>
-                        <tr>
-                            <td><select name="Elegi" id="">
-                                <option value="1">Salto Tandem</option>
-                                <option value="2">Curso Principiante</option>
-                                <option value="3">Curso Windsuit</option>
-                                <option value="4">Curso Avanzado</option>
-                            </select></td></td>
-                            <td> <i class="fa-solid fa-dollar-sign"></i> --</td>
-                            <td> <select name="" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-
-                                </select></td>
+            <section id="paracaidasCart2">
+                <div>
+                    <img style="height: 80%; width: 80%;" src="/img/cart2v2.jpg" alt="paracaidasCart">
+                </div>
+            </section>
+            <section id="calender-total2">
+                <section id="PPCT-calendar3">
+                    <div id="PPCT">                   
+                        <table>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td><select name="Elegi" id="">
+                                    <option value="1">Salto Tandem</option>
+                                    <option value="2">Curso Principiante</option>
+                                    <option value="3">Curso Windsuit</option>
+                                    <option value="4">Curso Avanzado</option>
+                                </select></td></td>
                                 <td> <i class="fa-solid fa-dollar-sign"></i> --</td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="calendar"> <input type="date"> <img src="/img/calendar-PH.JPG" alt="CalendarPlaceholder"></div>
-            </section>
+                                <td> <select name="" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
 
-            <section id="totalCart3">                
-                <div id="totalCarrito">
-                    <p> <h4> TOTAL CARRITO </h4></p>
-                    <hr>
-                    <p>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-dollar-sign"></i> ---</p>
-                    <hr>
-                    <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-dollar-sign"></i> --- </p>
-                    <button> FINALIZAR COMPRA</button>
-                </div>
+                                    </select></td>
+                                    <td> <i class="fa-solid fa-dollar-sign"></i> --</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="calendar"> <input type="date"> <img src="/img/calendar-PH.JPG" alt="CalendarPlaceholder"></div>
+                </section>
+
+                <section id="totalCart3">                
+                    <div id="totalCarrito">
+                        <p> <h4> TOTAL CARRITO </h4></p>
+                        <hr>
+                        <p>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-dollar-sign"></i> ---</p>
+                        <hr>
+                        <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-dollar-sign"></i> --- </p>
+                        <button> FINALIZAR COMPRA</button>
+                    </div>
+                </section>
             </section>
-        </section>
-    </main>
+        </main>
+    
 
 </body>
 <div><%- include("../partials/footer")%> </div>

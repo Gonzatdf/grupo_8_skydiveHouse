@@ -6,6 +6,11 @@
     
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 h4.elegir {
     margin: 10px;
     padding: 12px 0 0 20px;

@@ -142,6 +142,36 @@ footer.cartBack p {
   color: rgb(44, 42, 42);
 }
 
+main.cartBack1 div.filter#container{
+  width: 100vw;
+  height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px #000;
+  border: 1px solid #ffffff40;
+  position: absolute;
+  visibility: visible;
+}
+
+main.cartBack1:hover div.filter#container{
+  visibility: hidden;
+}
+
+.filter{
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: rgba(243,243,243,0.2);
+}
+
+
+.info{
+  color: rgb(114, 59, 59);
+  font-family: cursive;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20vh;
+  opacity: 0.5;
+}
+
 
 @media (max-width: 480px) {
   /* nav .logo-PC {

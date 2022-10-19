@@ -18,12 +18,10 @@
       </div>
       <h2 class="form-title">Login</h2>
       <div class="form-field2">
-        <div class="form-field2">
-          <label class="form-field__label <%= locals.errors && errors.email ? "form-field__invalid" : null %>" 
-            for="email"><i class="fa-regular fa-envelope form-field__icon"></i></label>
-          <input class="form-field__input" type="text" placeholder="E-mail" id="email" name="email"
-          value = "<%= locals.oldData ? oldData.email : null  %>">          
-        </div>
+        <label class="form-field__label <%= locals.errors && errors.email ? "form-field__invalid" : null %>" 
+          for="email"><i class="fa-regular fa-envelope form-field__icon"></i></label>
+        <input class="form-field__input" type="text" placeholder="E-mail" id="email" name="email"
+        value = "<%= locals.oldData ? oldData.email : null  %>">          
       </div>
       <% if (locals.errors && errors.email) {%>
         <div class="errorMsg">
