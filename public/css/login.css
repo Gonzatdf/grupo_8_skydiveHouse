@@ -124,6 +124,16 @@ body {
   justify-content: center;
 }
 
+.form-field2 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: baseline ;
+  
+ 
+ 
+}
+
 .text-password {
   text-align: right;
 }
