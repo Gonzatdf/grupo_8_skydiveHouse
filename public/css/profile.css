@@ -32,3 +32,8 @@ div.profile img {
 .form-button:hover {
     background-color: #962420;
 }
+
+body{
+    display: flex;
+	flex-direction: column;
+}

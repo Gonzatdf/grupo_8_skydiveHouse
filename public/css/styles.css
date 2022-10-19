@@ -87,6 +87,8 @@ body section#homeDos {
   width: 100vw;
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column
  
 }
 body section#homeDos div{
@@ -138,9 +140,10 @@ h3:nth-child(5) {
 .pie-pagina{
   width: 100%;
   background-color: black;
-    /* position: absolute; */
-    bottom: 0;
-    display: block;
+  /* position: absolute; */
+  bottom: 0;
+  display: block;
+  position: absolute;
 }
 
 .pie-pagina .grupo1{
