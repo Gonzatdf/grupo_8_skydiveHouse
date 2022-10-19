@@ -1,7 +1,11 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+
+
 }
 :root {
   --primary-color: #2b2a29;
@@ -36,13 +40,12 @@ div.errorMsg{
   font-weight: 500;
 }
 
-@media (min-width: 1200px) {
-  body {
-    /* background-size: contain; */
-    background-position: center 20px;
-  }
-  .main {
-    max-width: 800px;
- 
-  }
+span {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-family: 'Baloo Paaji', cursive;
+  font-size: xx-large;
+  color: red;
+  opacity: .4;
 }

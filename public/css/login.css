@@ -7,7 +7,7 @@
 :root {
   --primary-color: #2b2a29;
   --secondary-color: #962420;
-  --font: 'Anek Malayalam', sans-serif;
+  --font: "Anek Malayalam", sans-serif;
 }
 
 body {
@@ -22,9 +22,7 @@ body {
   margin: 0;
 }
 
-
-
-.pie-pagina{
+.pie-pagina {
   position: absolute;
 }
 .header {
@@ -77,7 +75,6 @@ body {
   margin-bottom: 10px;
 }
 
-
 .form {
   background-color: rgba(255 255 255 /0.5);
   max-width: 310px;
@@ -127,11 +124,10 @@ body {
 .form-field2 {
   margin-top: 5%;
   display: flex;
-  justify-content: space-between;
-  justify-items: baseline ;
-  
- 
- 
+  justify-content: center;
+  justify-items: baseline;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .text-password {
@@ -183,11 +179,11 @@ body {
   background-color: var(--secondary-color);
 }
 
-.form-field__invalid{
+.form-field__invalid {
   background-color: var(--secondary-color);
 }
-div.form-field_img{
-display: flex;
+div.form-field_img {
+  display: flex;
 }
 
 /* .form-field_img::before {
@@ -197,11 +193,10 @@ display: flex;
 /* .form-field_img input[type="file"]{
   opacity: 0;
   
-} */ */
-
-.text {
-  visibility: hidden
-    /* color: white;
+} */
+*/ .text {
+  visibility: hidden;
+  /* color: white;
   font-size: 1.2rem;
   letter-spacing: 1.2px; */
 }
@@ -217,9 +212,9 @@ display: flex;
 }
 
 @media (min-width: 768px) {
-body{
-  height: 115vh;
-}
+  body {
+    height: 115vh;
+  }
 
   .main {
     width: 80%;
@@ -296,4 +291,5 @@ body{
     color: white;
     font-size: 1.2rem;
     letter-spacing: 1.2px;
-  }}
+  }
+}
