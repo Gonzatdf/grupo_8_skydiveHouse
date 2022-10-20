@@ -140,6 +140,7 @@ body {
   margin-right: 8px;
   border-radius: 10px;
   transition: all 300ms;
+  opacity: .6;
 }
 
 .form-field__icon {
@@ -151,8 +152,9 @@ body {
   width: 85%;
   height: 40px;
   border-radius: 10px;
-  border: 1px solid gray;
+  border: 1px solid #ffffff;
   caret-color: var(--secondary-color);
+  
 }
 
 .form-field__input:focus {

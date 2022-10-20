@@ -25,11 +25,12 @@ body {
   position: relative;
   display: flex;
 	flex-direction: column;
+  min-width: 100vw;
   /* overflow: hidden; */
 }
 
 .form {
-  top: 30px;
+  top:30px;
 }
 
 
@@ -40,12 +41,22 @@ div.errorMsg{
   font-weight: 500;
 }
 
-span {
-  display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-family: 'Baloo Paaji', cursive;
-  font-size: xx-large;
-  color: red;
-  opacity: .4;
+.form-field__input{
+  border-color: #ffffff;
+}
+
+.form-field__label{
+  opacity: .6;
+}
+.form-title{
+  padding-bottom: 20px;
+}
+
+
+.form-field_img{
+  padding: 20px;
+  justify-content: center;
+  color:#962420;
+
+ 
 }
