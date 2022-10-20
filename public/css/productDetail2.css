@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:200,300,400,800,900);
+
 * {
     font-family: 'Anek Malayalam', sans-serif;
     box-sizing: border-box;
@@ -5,6 +7,8 @@
     margin: 0;
     
 }
+
+
 
 body{
     display: flex;
@@ -119,10 +123,33 @@ form.edit button  {
       -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89
 }
 
+.deepshadow {
+    color: #e0dfdc;
+    background-color: #333;
+    letter-spacing: 0.1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+      0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+      0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c,
+      0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414,
+      0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+  .insetshadow {
+    color: #202020;
+    background-color: #2d2d2d;
+    letter-spacing: 0.1em;
+    text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  }
+  .retroshadow {
+    color: #2c2c2c;
+    background-color: #d5d5d5;
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+
 .textos-elegantes {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
-      "AppleGothic", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
+    color: #962420;
     padding-left: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -143,6 +170,14 @@ a.badge-colorGris:focus, a.badge-colorGris.focus {
 a:link, a:visited, a:active {
     text-decoration:none;
     color: #434242;
+}
+
+.inner img{
+    transition: all 500ms ease;
+}
+
+.inner:hover img{
+    transform: scale(1.05);
 }
 
 @media (min-width: 320px) and (max-width: 765px){

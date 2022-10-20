@@ -11,7 +11,7 @@
   <%- include("../partials/header")%>
     <main>
       <h4 style="margin: 10px; padding: 20px;"><a href="/" class="badge-colorGris">Home</a>/ <strong>Reserva tu salto</strong></h4>
-      <h4 class="elegantshadow textos-elegantes" style="text-align: left; font-size: 30px;">ELIGE TU PROXIMA AVENTURA</h4>
+      <h4 class="textos-elegantes" style="text-align: left; font-size: 30px;">ELIGE TU PROXIMA AVENTURA</h4>
 
       <!--Creación de producto, solo podra ser visto por un usuario administrador.-->
       <% if (esAdministrador) { %>  
@@ -25,7 +25,7 @@
       <div class="allProducts">
         <% for (let index=0; index <products.length;index++) {%>
           <article>
-            <a href="/products/<%= products[index].id %>"><img src="/img/uploads/products/<%= products[index].image %>" alt="<% products.image %>">
+            <a href="/products/<%= products[index].id %>"><div class="inner"><img src="/img/uploads/products/<%= products[index].image %>" alt="<% products.image %>"></div>
             <div class="productDetail">             
               <h4> <%=products[index].product_name %>              
                <i class="fa-solid fa-dollar-sign"></i> <%= products[index].price%>
