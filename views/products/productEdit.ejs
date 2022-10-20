@@ -10,8 +10,9 @@
 
 <body>
   <%- include("../partials/header")%>
-
-    <main class="main" style="height: 100vh;">
+  <h4 style="margin-top: 90px; margin-left: 20px;"><a href="/" class="badge-colorGris">Home</a>/<a href="/products" class="badge-colorGris">Reserva tu salto</a>/<strong>Editar producto</strong></h4>
+    <main class="main" style="height: 900px;">
+      
       <form class="form" id="editProductForm" action="/products/edit/<%=product.id%>?_method=PUT" method="post"
         enctype="multipart/form-data">
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/stylesCart.css">
 </head>
 
-<body class="productCart" style="backdrop-filter: blur(10px);">
+<body class="productCart" style="height: 100vh;">
     <header>
         <%- include("../partials/header")%> 
     </header>
@@ -49,7 +49,10 @@
                             </tr>
                         </table>
                     </div>
-                    <div id="calendar"> <input type="date"> <img src="/img/calendar-PH.JPG" alt="CalendarPlaceholder"></div>
+                    <div id="calendar"> 
+                        <label><strong>Fecha Reserva</strong></label>
+                        <input type="date">
+                    </div>
                 </section>
 
                 <section id="totalCart3">                
@@ -66,7 +69,7 @@
         </main>
     
 
+    <%- include("../partials/footer")%>
 </body>
-<div><%- include("../partials/footer")%> </div>
 
 </html>

@@ -179,6 +179,23 @@ div.form-field img{
   border-radius: 10px;
 }
 
+a.badge-colorGris:hover, a.badge-colorGris:focus {
+  color: #fff;
+  background-color: rgb(150, 36, 32);
+  border-radius: 5px;
+}
+
+a.badge-colorGris:focus, a.badge-colorGris.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color:rgb(43, 42, 53);
+}
+
+
 @media (min-width: 768px) {
   .main {
     width: 80%;
